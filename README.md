@@ -51,25 +51,34 @@ Welcome to the repository! This guide will help you understand how to work on th
 
 ## Project Structure
 
+```bash
 ecommerce-project/
-├── index.html # Home Page
-├── product.html # Single Product Page
-├── cart.html # Cart Page
-├── all-products.html # All Products Page
-├── assets/
-│ ├── css/
-│ │ ├── styles.css # Main stylesheet
-│ │ ├── navbar.css # Navbar-specific styles (optional)
-│ │ ├── footer.css # Footer-specific styles (optional)
-│ ├── js/
-│ │ ├── main.js # General JavaScript functionality
-│ │ ├── navbar.js # Script to load the Navbar
-│ │ ├── footer.js # Script to load the Footer
-│ │ ├── cart.js # Logic for Cart Page
-│ │ ├── product.js # Logic for Product Page
-│ ├── images/ # Folder for all image assets
-│ ├── fonts/ # Folder for custom fonts (if any)
-├── README.md # Documentation for the project
+├── index.html             # Home Page
+├── product.html           # Single Product Page
+├── cart.html              # Cart Page
+├── all-products.html      # All Products Page
+├── assets/                # Static assets
+│   ├── css/
+│   │   ├── globals.css        # Global styles (reset, variables, typography)
+│   │   ├── navbar.css         # Styles for Navbar
+│   │   ├── footer.css         # Styles for Footer
+│   │   ├── product.css        # Styles for Product Page
+│   │   ├── cart.css           # Styles for Cart Page
+│   │   ├── all-products.css   # Styles for All Products Page
+│   ├── js/
+│   │   ├── navbar.js          # Logic for Navbar
+│   │   ├── footer.js          # Logic for Footer
+│   │   ├── product.js         # Product Page logic
+│   │   ├── cart.js            # Cart functionality
+│   │   ├── all-products.js    # Logic for All Products Page
+│   ├── images/                # All image assets
+│   ├── fonts/                 # Fonts if used
+├── components/            # Reusable UI Components
+│   ├── navbar.html         # Navbar Markup
+│   ├── footer.html         # Footer Markup
+├── README.md              # Project Documentation
+
+```
 
 ## Contact 📬
 
