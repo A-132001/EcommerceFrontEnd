@@ -7,7 +7,7 @@ function footerContent() {
      <div>
         <div class="container">
             <div class="big_row">
-                <img src="../assets/images/footer_images/logo-white.png" alt="">
+                <img src="./assets/images/footer_images/logo-white.png" alt="">
                 <div class="hotline">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-40v-80h280v-40H600v-320h160v-40q0-116-82-198t-198-82q-116 0-198 82t-82 198v40h160v320H200q-33 0-56.5-23.5T120-240v-280q0-74 28.5-139.5T226-774q49-49 114.5-77.5T480-880q74 0 139.5 28.5T734-774q49 49 77.5 114.5T840-520v400q0 33-23.5 56.5T760-40H480ZM200-240h80v-160h-80v160Zm480 0h80v-160h-80v160ZM200-400h80-80Zm480 0h80-80Z"/></svg>                        
 
@@ -119,7 +119,7 @@ function footerContent() {
                         </div>
                         <div class="app_store">
                             <h4>Download The App - Get 30% Sale Coupon</h4>
-                            <a href="#"><img src="../assets/images/footer_images/app-store copy.jpg" alt=""></a>
+                            <a href="#"><img src="../images/footer_images/app-store-copy.jpg" alt=""></a>
                         </div>
             
         </div>
@@ -132,10 +132,10 @@ function footerContent() {
             <div class="container">
                 <p>Copyright &copy; <span>Topico</span> all rights reserved</p>
                  <div class="payment_img">
-                    <img src="../assets/images/footer_images/payment-1.png" alt="">
-                    <img src="../assets/images/footer_images/payment-2.png" alt="">
-                    <img src="../assets/images/footer_images/payment-3.png" alt="" >
-                    <img src="../assets/images/footer_images/payment-4.png" alt="" >
+                    <img src="./assets/images/footer_images/payment-1.png" alt="">
+                    <img src="./assets/images/footer_images/payment-2.png" alt="">
+                    <img src="./assets/images/footer_images/payment-3.png" alt="" >
+                    <img src="./assets/images/footer_images/payment-4.png" alt="" >
                 </div>
 
             </div>

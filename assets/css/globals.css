@@ -10,10 +10,15 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* * {
-    outline: 1px solid red;
-    overflow-x: hidden;
-} */
+:root{
+    --main-color: #fcb700;
+    --dark-color:#222222;
+     --parg-color:#666666;
+     --dark-red:#d01418;
+     --border-color:#6666662a;
+     --name-item:#0066c0;
+}
+
 body{
     background-color: #f5f6f9;
     margin-top: 180px;
@@ -361,7 +366,7 @@ footer .footer_mid .container
     justify-content: space-between;
     gap:15px;
     flex-direction: column;
-    /* margin: 10px; */
+    margin: 10px;
 
 }
 
@@ -403,7 +408,7 @@ footer .footer_mid .app_store h4
 
 .footer_mid .container 
 {
-    width: 100%;
+    width: 90%;
     margin-left: auto;
     margin-right:auto;
 }

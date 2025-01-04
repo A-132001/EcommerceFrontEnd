@@ -11,7 +11,7 @@ function navbarContent() {
   return `
       <header>
         <div class="container top-nav">
-            <a href="#" class="logo"><img src="img/logo-black.png" alt=""></a>
+            <a href="#" class="logo"><img src="./assets/images/logo-black.png" alt=""></a>
             <form action="" class="search">
                 <input type="search" placeholder="Search for products ...">
                 <button type="submit">Search</button>
@@ -31,7 +31,7 @@ function navbarContent() {
         <nav>
             <div class="links container">
                 <ul>
-                    <li class="active"><a href="">Home</a></li>
+                    <li class="active"><a href="./index.html">Home</a></li>
                     <li><a href="">all products</a></li>
                     <li><a href="">about us</a></li>
                     <li><a href="">contact</a></li>
