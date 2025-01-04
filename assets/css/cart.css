@@ -1,6 +1,8 @@
-/* General Styling */
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Rubik", sans-serif;
+  line-height: 24px;
+  font-size: 13px;
   margin: 0;
   padding: 0;
 }
@@ -20,7 +22,7 @@ body {
   width: 100%;
 }
 
-/* Cart Table */
+
 .table-wrapper {
   overflow-x: auto;
   margin-bottom: 30px;
@@ -58,15 +60,14 @@ body {
   color: #555;
 }
 
-/* Quantity Control */
-/* Cart Plus-Minus Container */
+
 .cart-plus-minus {
   position: relative;
   margin: 0 auto;
   width: fit-content;
 }
 
-/* Input Field */
+
 .cart-plus-minus input {
   height: 40px;
   text-align: center;
@@ -88,7 +89,6 @@ body {
   cursor: pointer;
   font-size: 18px;
   font-weight: bold;
-  transition: background-color 0.2s ease;
 }
 
 
@@ -106,13 +106,15 @@ body {
 
 
 
-/* Remove Button */
-.column-remove a {
-  color: #ff4d4f;
-  font-size: 1.2em;
+
+.column-remove span {
+  color: #0c0101;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-/* Coupon Section */
+
 .coupon-area {
   display: flex;
   justify-content: space-between;
@@ -139,10 +141,14 @@ body {
   text-transform: initial;
   border: 2px solid transparent;
   text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .btn-border {
-  background: #ffffff;
+  background-color: #ffffff;
   color: #222;
   border-color: #fcb700;
 }
@@ -151,12 +157,33 @@ body {
   color: #ffffff;
 }
 .btn:hover {
+  border-color:#ffffff ;
+  color: #222;
+  background-color:#fcb700;
+}
+.proceed-btn{
+    font-size: 14px;
+  font-weight: 500;
+  background-color: #fcb700;
+  height: 45px;
+  line-height: 42px;
+  padding: 0 50px;
+  color: #ffffff;
+  border-radius: 30px;
+  text-transform: initial;
+  border: 2px solid transparent;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.proceed-btn:hover{
   border-color: #fcb700;
   color: #222;
   background: #ffffff;
 }
 
-/* Cart Summary */
 .cart-summary {
   background-color: #f9f9f9;
   padding: 20px;

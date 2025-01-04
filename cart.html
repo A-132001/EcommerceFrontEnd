@@ -4,78 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/cart.css" />
+    <link rel="stylesheet" href="assets/css/globals.css">
     <title>Cart Page</title>
   </head>
   <body>
-    <section class="cart">
+    <header></header>
+    <section class="cart" id="cart">
       <div class="container">
         <div class="row">
           <div class="full-width">
             <form action="#">
               <div class="table-wrapper">
-                <table class="cart-table">
-                  <thead>
-                    <tr>
-                      <th class="column-thumbnail">Images</th>
-                      <th class="column-name">Product</th>
-                      <th class="column-price">Unit Price</th>
-                      <th class="column-quantity">Quantity</th>
-                      <th class="column-subtotal">Total</th>
-                      <th class="column-remove">Remove</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="column-thumbnail">
-                        <a href="product-details.html">
-                          <img
-                            src="assets/images/product-2.jpeg"
-                            alt="Product Image"
-                          />
-                        </a>
-                      </td>
-                      <td class="column-name">
-                        <a href="product-details.html">Bakix Furniture</a>
-                      </td>
-                      <td class="column-price"><span>$130.00</span></td>
-                      <td class="column-quantity">
-                        <div class="cart-plus-minus">
-                          <input type="text" value="1" />
-                          <div class="dec qtybutton">-</div>
-                          <div class="inc qtybutton">+</div>
-                        </div>
-                      </td>
-                      <td class="column-subtotal"><span>$130.00</span></td>
-                      <td class="column-remove">
-                        <a href="#"><i class="fa fa-times"></i></a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="column-thumbnail">
-                        <a href="product-details.html">
-                          <img
-                            src="assets/images/product-1.jpeg"
-                            alt="Product Image"
-                          />
-                        </a>
-                      </td>
-                      <td class="column-name">
-                        <a href="product-details.html">Sujon Chair Set</a>
-                      </td>
-                      <td class="column-price"><span>$120.50</span></td>
-                      <td class="column-quantity">
-                        <div class="cart-plus-minus">
-                          <input type="text" value="1" />
-                          <div class="dec qtybutton">-</div>
-                          <div class="inc qtybutton">+</div>
-                        </div>
-                      </td>
-                      <td class="column-subtotal"><span>$120.50</span></td>
-                      <td class="column-remove">
-                        <a href="#"><i class="fa fa-times"></i></a>
-                      </td>
-                    </tr>
-                  </tbody>
+                <table class="cart-table" id="cart-table">
+                  
                 </table>
               </div>
               <div class="row">
@@ -102,7 +43,7 @@
                     <li>Subtotal <span>$250.00</span></li>
                     <li>Total <span>$250.00</span></li>
                   </ul>
-                  <a class="btn" href="checkout.html">Proceed to Checkout</a>
+                  <span class="proceed-btn">Proceed to Checkout</span>
                 </div>
               </div>
             </form>
@@ -110,7 +51,10 @@
         </div>
       </div>
     </section>
-
+    <footer></footer>
     <script src="./assets/js/cart.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/footer.js"></script> 
+    <script src="assets/js/load_components.js"></script>
   </body>
 </html>
