@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product - Page</title>
+    <link rel="stylesheet" href="assets/css/globals.css">
+    <link rel="stylesheet" href="assets/css/product.css">
+</head>
+
+<body>
+    <!-- Navbar and Footer will be dynamically loaded -->
+    <header></header>
+    <!-- Main Content -->
+    <main>
+        <section class="content">
+            <div class="product-container">
+                <div class="product-image">
+                    <img src="assets/images/product_page_images/product1.jpg" alt="Product Image">
+                </div>
+                <div class="product-details">
+                    <h1>Smart Mobile Phone 7/7plus/8/8plus/X/Xr W 32 to 128GB</h1>
+                    <div class="review">
+                        <h3>Rate this product:</h3>
+                        <div class="stars">
+                            <span class="star" onclick="rateProduct(1)">&#9734;</span>
+                            <span class="star" onclick="rateProduct(2)">&#9734;</span>
+                            <span class="star" onclick="rateProduct(3)">&#9734;</span>
+                            <span class="star" onclick="rateProduct(4)">&#9734;</span>
+                            <span class="star" onclick="rateProduct(5)">&#9734;</span>
+                        </div>
+                        <p class="price">$99.99</p>
+                        <p class="description">Typi non habent claritatem insitam, est usus legentis in iis qui facit
+                            eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt
+                            saepius. Claritas est etiam processus. Lorem Ipsum has been the industry's standard dummy
+                            text ever since the 1500s, when anunknown printer took a galley of type and scrambled it to
+                            make a type specimen book.</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <div class="favorite">
+                            <span class="star-icon" onclick="toggleFavorite()">&#9734;</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="assets/js/product.js"></script>
+    <script src="assets/js/load_components.js"></script>
+
+</body>
+
+</html>
