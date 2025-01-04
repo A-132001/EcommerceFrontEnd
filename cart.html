@@ -1,15 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/cart.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/cart.css" />
     <title>Cart Page</title>
-</head>
-<body>
-    <div>Hello From Cart page</div>
-    <h1>Please Do not make any changes in this page, or its css and js</h1>
-    <p>Mostafa Kadry</p>
+  </head>
+  <body>
+    <section class="cart">
+      <div class="container">
+        <div class="row">
+          <div class="full-width">
+            <form action="#">
+              <div class="table-wrapper">
+                <table class="cart-table">
+                  <thead>
+                    <tr>
+                      <th class="column-thumbnail">Images</th>
+                      <th class="column-name">Product</th>
+                      <th class="column-price">Unit Price</th>
+                      <th class="column-quantity">Quantity</th>
+                      <th class="column-subtotal">Total</th>
+                      <th class="column-remove">Remove</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="column-thumbnail">
+                        <a href="product-details.html">
+                          <img
+                            src="assets/images/product-2.jpeg"
+                            alt="Product Image"
+                          />
+                        </a>
+                      </td>
+                      <td class="column-name">
+                        <a href="product-details.html">Bakix Furniture</a>
+                      </td>
+                      <td class="column-price"><span>$130.00</span></td>
+                      <td class="column-quantity">
+                        <div class="cart-plus-minus">
+                          <input type="text" value="1" />
+                          <div class="dec qtybutton">-</div>
+                          <div class="inc qtybutton">+</div>
+                        </div>
+                      </td>
+                      <td class="column-subtotal"><span>$130.00</span></td>
+                      <td class="column-remove">
+                        <a href="#"><i class="fa fa-times"></i></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="column-thumbnail">
+                        <a href="product-details.html">
+                          <img
+                            src="assets/images/product-1.jpeg"
+                            alt="Product Image"
+                          />
+                        </a>
+                      </td>
+                      <td class="column-name">
+                        <a href="product-details.html">Sujon Chair Set</a>
+                      </td>
+                      <td class="column-price"><span>$120.50</span></td>
+                      <td class="column-quantity">
+                        <div class="cart-plus-minus">
+                          <input type="text" value="1" />
+                          <div class="dec qtybutton">-</div>
+                          <div class="inc qtybutton">+</div>
+                        </div>
+                      </td>
+                      <td class="column-subtotal"><span>$120.50</span></td>
+                      <td class="column-remove">
+                        <a href="#"><i class="fa fa-times"></i></a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row">
+                <div class="full-width">
+                  <div class="coupon-area">
+                    <div class="coupon-input">
+                      <input
+                        id="coupon-code"
+                        placeholder="Coupon code"
+                        type="text"
+                      />
+                      <button class="btn btn-border">Apply Coupon</button>
+                    </div>
+                    <div class="coupon-update">
+                      <button class="btn btn-border">Update Cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="cart-summary">
+                  <h2>Cart Totals</h2>
+                  <ul>
+                    <li>Subtotal <span>$250.00</span></li>
+                    <li>Total <span>$250.00</span></li>
+                  </ul>
+                  <a class="btn" href="checkout.html">Proceed to Checkout</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <script src="./assets/js/cart.js"></script>
-</body>
+  </body>
 </html>

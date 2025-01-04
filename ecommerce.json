@@ -1,0 +1,424 @@
+{
+    "store1": {
+      "name": "Tech Store",
+      "products": [
+        {
+          "name": "Laptop",
+          "price": 999.99,
+          "description": "A high-performance laptop with 16GB RAM and 512GB SSD.",
+          "image": "https://www.techtarget.com/rms/onlineimages/hp_elitebook_mobile.jpg"
+        },
+        {
+          "name": "Wireless Mouse",
+          "price": 25.99,
+          "description": "A sleek and ergonomic wireless mouse.",
+          "image": "https://image.made-in-china.com/2f0j00iagUrMDIISot/Slim-Wireless-Mouse-1200-Dpi.jpg"
+        },
+        {
+          "name": "Smartphone",
+          "price": 799.99,
+          "description": "A high-end smartphone with a 108MP camera and 5G connectivity.",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmjhPgIG53E1Sz6FD0e4SmYjfrzuvuI2ig7g&s"
+        },
+        {
+          "name": "Smart Watch",
+          "price": 199.99,
+          "description": "A stylish smartwatch with health tracking features.",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx0NlDioHeVBOWBGsH-woHs_vZpTCuopn31w&s"
+        },
+        {
+          "name": "Bluetooth Headphones",
+          "price": 89.99,
+          "description": "Noise-canceling Bluetooth headphones with high-quality sound.",
+          "image": "https://www.energysistem.com/cdnassets/products/45305/principal_2000.jpg"
+        },
+        {
+          "name": "Keyboard",
+          "price": 49.99,
+          "description": "Mechanical keyboard with customizable RGB lighting.",
+          "image": "https://www.daskeyboard.com/images/mactigr/MacTigr-thumb-top.jpeg"
+        },
+        {
+          "name": "Gaming Mouse",
+          "price": 69.99,
+          "description": "Ergonomic gaming mouse with 16000 DPI sensor.",
+          "image": "https://m.media-amazon.com/images/I/71C5DxSXaSL.jpg"
+        },
+        {
+          "name": "Portable Charger",
+          "price": 29.99,
+          "description": "Portable power bank with 10000mAh capacity.",
+          "image": "https://m.media-amazon.com/images/I/71d6xPExgVL.jpg"
+        },
+        {
+          "name": "Laptop Bag",
+          "price": 45.99,
+          "description": "Stylish and durable bag for carrying your laptop.",
+          "image": "https://2b.com.eg/media/catalog/product/cache/661473ab953cdcdf4c3b607144109b90/b/h/bh096-5-min.jpg"
+        },
+        {
+          "name": "Gaming Headset",
+          "price": 129.99,
+          "description": "High-quality gaming headset with surround sound.",
+          "image": "https://m.media-amazon.com/images/I/71nUYWaf0RL.jpg"
+        },
+        {
+          "name": "Desktop Monitor",
+          "price": 199.99,
+          "description": "27-inch Full HD monitor with ultra-slim bezels.",
+          "image": "https://2b.com.eg/media/catalog/product/cache/661473ab953cdcdf4c3b607144109b90/l/d/ld390--2222222.jpg"
+        },
+        {
+          "name": "External Hard Drive",
+          "price": 89.99,
+          "description": "1TB external hard drive for data backup and storage.",
+          "image": "https://www.minitool.com/images/uploads/2019/06/external-hard-disk-1.png"
+        },
+        {
+          "name": "Router",
+          "price": 59.99,
+          "description": "Wi-Fi router with high-speed connectivity.",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfJO6fNhFLCZ-RgVLUqiAS5__iZWHjEhe7bw&s"
+        },
+        {
+          "name": "Camera",
+          "price": 499.99,
+          "description": "Digital camera with 4K video recording and Wi-Fi.",
+          "image": "https://shuttershopegypt.com/wp-content/uploads/2024/08/Canon-EOS-RP-Mirrorless-Digital-Camera-with-24-105mm.jpg.webp"
+        },
+        {
+          "name": "Tablet",
+          "price": 399.99,
+          "description": "10-inch tablet with 128GB storage and stylus.",
+          "image": "https://mobaili.com/image/cache/catalog/product-335/samsung-galaxy-tab-3-lite-wi-fi-7-inches-8-gb-white-sa766el36prf-1000x1000.jpg"
+        },
+        {
+          "name": "Game Console",
+          "price": 299.99,
+          "description": "Latest generation game console with 4K support.",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmvzmkHjyK_Gk-bHsCbgfSXd0NoipqKC9mig&s"
+        },
+        {
+          "name": "VR Headset",
+          "price": 249.99,
+          "description": "Virtual reality headset for immersive gaming experiences.",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDFUzRtlL6GprVH2tNExwTzKhnNFnsq8SKrQ&s"
+        },
+        {
+          "name": "Smart Speaker",
+          "price": 99.99,
+          "description": "Smart speaker with voice control and home automation features.",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzwkkMPUoB0-8AysqrxMtrh6wP8cONj7XQNw&s"
+        },
+        {
+          "name": "Smart Glasses",
+          "price": 399.99,
+          "description": "Smart glasses with built-in display and voice assistant.",
+          "image": "https://m.media-amazon.com/images/I/71NL9XcuepL.AC_UF894,1000_QL80.jpg"
+        },
+        {
+          "name": "External Webcam",
+          "price": 69.99,
+          "description": "1080p external webcam with built-in microphone.",
+          "image": "https://m.media-amazon.com/images/I/61C8OKzGTOL.jpg"
+        }
+      ]
+    },
+    "store2": {
+      "name": "Fashion Hub",
+      "products": [
+        {
+          "name": "Jeans",
+          "price": 49.99,
+          "description": "Stylish slim fit jeans for everyday wear.",
+          "image": "https://example.com/images/jeans.jpg"
+        },
+        {
+          "name": "Leather Jacket",
+          "price": 199.99,
+          "description": "Premium quality leather jacket with a timeless design.",
+          "image": "https://example.com/images/jacket.jpg"
+        },
+        {
+          "name": "T-Shirt",
+          "price": 19.99,
+          "description": "Cotton T-shirt with a comfortable fit.",
+          "image": "https://example.com/images/tshirt.jpg"
+        },
+        {
+          "name": "Sneakers",
+          "price": 79.99,
+          "description": "Trendy sneakers with a cushioned sole.",
+          "image": "https://example.com/images/sneakers.jpg"
+        },
+        {
+          "name": "Sweater",
+          "price": 49.99,
+          "description": "Soft and warm sweater, perfect for cold weather.",
+          "image": "https://example.com/images/sweater.jpg"
+        },
+        {
+          "name": "Dress",
+          "price": 89.99,
+          "description": "Elegant dress suitable for both casual and formal occasions.",
+          "image": "https://example.com/images/dress.jpg"
+        },
+        {
+          "name": "Blazer",
+          "price": 129.99,
+          "description": "Stylish blazer for business or casual wear.",
+          "image": "https://example.com/images/blazer.jpg"
+        },
+        {
+          "name": "Shorts",
+          "price": 34.99,
+          "description": "Comfortable shorts for warm weather.",
+          "image": "https://example.com/images/shorts.jpg"
+        },
+        {
+          "name": "Scarf",
+          "price": 19.99,
+          "description": "Soft scarf to complement your outfit.",
+          "image": "https://example.com/images/scarf.jpg"
+        },
+        {
+          "name": "Cap",
+          "price": 14.99,
+          "description": "Stylish cap for everyday wear.",
+          "image": "https://example.com/images/cap.jpg"
+        },
+        {
+          "name": "Handbag",
+          "price": 69.99,
+          "description": "Elegant handbag with multiple compartments.",
+          "image": "https://example.com/images/handbag.jpg"
+        },
+        {
+          "name": "Watch",
+          "price": 199.99,
+          "description": "Classic wristwatch with leather strap.",
+          "image": "https://example.com/images/watch.jpg"
+        },
+        {
+          "name": "Boots",
+          "price": 119.99,
+          "description": "Stylish boots with a durable sole.",
+          "image": "https://example.com/images/boots.jpg"
+        },
+        {
+          "name": "Sunglasses",
+          "price": 49.99,
+          "description": "Trendy sunglasses to protect your eyes from the sun.",
+          "image": "https://example.com/images/sunglasses.jpg"
+        },
+        {
+          "name": "Belt",
+          "price": 29.99,
+          "description": "Leather belt with a sleek design.",
+          "image": "https://example.com/images/belt.jpg"
+        },
+        {
+          "name": "Suit",
+          "price": 249.99,
+          "description": "Tailored suit for formal occasions.",
+          "image": "https://example.com/images/suit.jpg"
+        },
+        {
+          "name": "Hoodie",
+          "price": 39.99,
+          "description": "Comfortable hoodie for a casual look.",
+          "image": "https://example.com/images/hoodie.jpg"
+        },
+        {
+          "name": "Slippers",
+          "price": 19.99,
+          "description": "Cozy slippers for indoor wear.",
+          "image": "https://example.com/images/slippers.jpg"
+        },
+        {
+          "name": "Jacket",
+          "price": 89.99,
+          "description": "Warm jacket for chilly weather.",
+          "image": "https://example.com/images/jacket2.jpg"
+        }
+      ]
+    },
+    "store3": {
+        "name": "Home Goods",
+        "products": [
+          {
+            "name": "Couch",
+            "price": 499.99,
+            "description": "A comfortable 3-seater couch for your living room.",
+            "image": "https://example.com/images/couch.jpg"
+          },
+          {
+            "name": "Coffee Table",
+            "price": 79.99,
+            "description": "Modern coffee table with a glass top and wooden legs.",
+            "image": "https://example.com/images/coffeetable.jpg"
+          },
+          {
+            "name": "Lamp",
+            "price": 39.99,
+            "description": "Elegant table lamp with adjustable brightness.",
+            "image": "https://example.com/images/lamp.jpg"
+          },
+          {
+            "name": "Dining Chair",
+            "price": 59.99,
+            "description": "Ergonomic dining chair with cushioned seat for comfort.",
+            "image": "https://example.com/images/diningchair.jpg"
+          },
+          {
+            "name": "Bookshelf",
+            "price": 129.99,
+            "description": "Stylish bookshelf with multiple tiers for books and decor.",
+            "image": "https://example.com/images/bookshelf.jpg"
+          },
+          {
+            "name": "Area Rug",
+            "price": 99.99,
+            "description": "Soft and durable area rug for living room or bedroom.",
+            "image": "https://example.com/images/arearug.jpg"
+          },
+          {
+            "name": "Wall Art",
+            "price": 49.99,
+            "description": "Beautiful abstract wall art to enhance your home decor.",
+            "image": "https://example.com/images/wallart.jpg"
+          },
+          {
+            "name": "Throw Blanket",
+            "price": 29.99,
+            "description": "Cozy throw blanket made of soft material for warmth.",
+            "image": "https://example.com/images/throwblanket.jpg"
+          },
+          {
+            "name": "Kitchen Set",
+            "price": 79.99,
+            "description": "Complete kitchen utensil set for all your cooking needs.",
+            "image": "https://example.com/images/kitchenset.jpg"
+          },
+          {
+            "name": "Dining Table",
+            "price": 299.99,
+            "description": "Elegant dining table with sturdy wooden legs and glass top.",
+            "image": "https://example.com/images/diningtable.jpg"
+          },
+          {
+            "name": "Wall Clock",
+            "price": 39.99,
+            "description": "Sleek and modern wall clock to complement your living space.",
+            "image": "https://example.com/images/wallclock.jpg"
+          },
+          {
+            "name": "Mirror",
+            "price": 89.99,
+            "description": "Large full-length mirror perfect for any room.",
+            "image": "https://example.com/images/mirror.jpg"
+          },
+          {
+            "name": "Bed Frame",
+            "price": 199.99,
+            "description": "Sturdy metal bed frame with adjustable base.",
+            "image": "https://example.com/images/bedframe.jpg"
+          },
+          {
+            "name": "Coffee Maker",
+            "price": 99.99,
+            "description": "High-quality coffee maker for fresh morning brews.",
+            "image": "https://example.com/images/coffeemaker.jpg"
+          }
+        ]
+      },
+      "store4": {
+        "name": "Sports Gear",
+        "products": [
+          {
+            "name": "Yoga Mat",
+            "price": 19.99,
+            "description": "Non-slip yoga mat for a comfortable workout session.",
+            "image": "https://example.com/images/yogamat.jpg"
+          },
+          {
+            "name": "Dumbbells",
+            "price": 39.99,
+            "description": "Pair of adjustable dumbbells for strength training.",
+            "image": "https://example.com/images/dumbbells.jpg"
+          },
+          {
+            "name": "Tennis Racket",
+            "price": 79.99,
+            "description": "Lightweight tennis racket for both beginners and experts.",
+            "image": "https://example.com/images/tennisracket.jpg"
+          },
+          {
+            "name": "Basketball",
+            "price": 29.99,
+            "description": "Durable and high-quality basketball for outdoor play.",
+            "image": "https://example.com/images/basketball.jpg"
+          },
+          {
+            "name": "Running Shoes",
+            "price": 59.99,
+            "description": "Breathable and comfortable running shoes for long-distance running.",
+            "image": "https://example.com/images/runningshoes.jpg"
+          },
+          {
+            "name": "Exercise Bike",
+            "price": 249.99,
+            "description": "High-performance exercise bike for indoor cycling workouts.",
+            "image": "https://example.com/images/exercisebike.jpg"
+          },
+          {
+            "name": "Soccer Ball",
+            "price": 19.99,
+            "description": "Official size soccer ball for recreational play.",
+            "image": "https://example.com/images/soccerball.jpg"
+          },
+          {
+            "name": "Baseball Glove",
+            "price": 49.99,
+            "description": "Leather baseball glove designed for maximum comfort and grip.",
+            "image": "https://example.com/images/baseballglove.jpg"
+          },
+          {
+            "name": "Golf Clubs",
+            "price": 299.99,
+            "description": "Complete set of golf clubs for professional and amateur players.",
+            "image": "https://example.com/images/golfclubs.jpg"
+          },
+          {
+            "name": "Camping Tent",
+            "price": 99.99,
+            "description": "Weather-resistant camping tent for up to 4 people.",
+            "image": "https://example.com/images/campingtent.jpg"
+          },
+          {
+            "name": "Fishing Rod",
+            "price": 59.99,
+            "description": "Telescoping fishing rod with reel and accessories.",
+            "image": "https://example.com/images/fishingrod.jpg"
+          },
+          {
+            "name": "Jump Rope",
+            "price": 12.99,
+            "description": "Durable jump rope for cardio and fitness training.",
+            "image": "https://example.com/images/jumprope.jpg"
+          },
+          {
+            "name": "Swimming Goggles",
+            "price": 15.99,
+            "description": "Anti-fog swimming goggles for clear vision underwater.",
+            "image": "https://example.com/images/swimminggoggles.jpg"
+          },
+          {
+            "name": "Hiking Backpack",
+            "price": 69.99,
+            "description": "Spacious and comfortable backpack for hiking trips.",
+            "image": "https://example.com/images/hikingbackpack.jpg"
+          }
+        ]
+      }
+    }
