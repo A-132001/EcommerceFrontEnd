@@ -1,0 +1,146 @@
+body {
+    display: none; 
+}
+#productData {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+justify-content: center;
+padding: 20px;
+}
+
+
+.stylediv {
+border: 1px solid #ddd;
+padding: 15px;
+width: 250px;
+text-align: center;
+border-radius: 10px;
+background-color: #f9f9f9;
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease;
+
+}
+
+
+.stylediv:hover {
+transform: translateY(-10px);
+}
+
+
+.stylediv h3 {
+font-size: 18px;
+color: #333;
+margin-bottom: 10px;
+font-weight: bold;
+}
+
+
+.stylediv h5 {
+
+font-size: 14px;
+color: #666;
+margin-bottom: 10px;
+}
+
+
+.stylediv h6 {
+font-size: 16px;
+color: #000000;
+font-weight: bold;
+}
+
+
+.stylediv img {
+max-width: 100%;
+height: 200px;
+margin-bottom: 10px;
+border-radius: 5px;
+}
+
+
+.styleH2 {
+width:100% ;
+
+font-size: 15px;
+font-weight: bold;
+margin-top: 20px;
+margin-bottom: 20px;
+color: #ffb700;
+
+}
+.store-link-box {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #7f80818a;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+.store-links {
+    display: flex;
+    justify-content: left;
+    gap: 40px;
+    margin-top: 40px;
+}
+.store-link-box:hover {
+    background-color: #f6cb09c5;
+}
+.hrStyle{
+  opacity: .5;
+  height: 2px;
+  background-color:#666;
+}
+.buttonStyle {
+position: absolute; /* جعل الزر يتموضع داخل div الرئيسي */
+background-color: #fdc200; /* لون الخلفية */
+color: white; /* لون النص */
+border: none; /* إزالة الحدود */
+padding: 10px 15px; /* التباعد الداخلي */
+cursor: pointer; /* مؤشر الفأرة */
+border-radius: 5px; /* جعل الحواف مستديرة */
+font-size: 14px; /* حجم النص */
+z-index: 100; /* لضمان ظهور الزر فوق باقي العناصر */
+bottom: 40px; /* مسافة من أسفل الـ div */
+left: 50%; /* وضع الزر في منتصف العرض */
+transform: translateX(-50%); /* محاذاة الزر أفقياً */
+display: none; /* إخفاء الزر افتراضياً */
+transition: background-color 0.5s;
+}
+
+.buttonStyle:hover {
+background-color: #040404; /* لون عند التمرير */
+}
+
+.stylediv {
+position: relative; /* جعل الـ div الأساسي مرجعًا للمواضع النسبية */
+text-align: center;
+display: inline-block;
+}
+
+
+
+ .heartStyle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: rgb(248, 174, 0);
+    z-index: 1;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.heartStyle:hover {
+    transform: scale(1.5); 
+    color: black; 
+}
+
+
+
+
