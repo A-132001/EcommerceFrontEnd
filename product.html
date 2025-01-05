@@ -7,10 +7,16 @@
     <title>Product Details</title>
     <link rel="stylesheet" href="assets/css/globals.css">
     <link rel="stylesheet" href="assets/css/product.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 
 <body>
-    <header></header>
+    <!-- load header from javascript file -->
+    <header id="header"></header>
+    <!-- Start product details main section -->
     <main>
         <div class="breadcrumb">
             <a href="#">Home</a> > <span>Product Details</span>
@@ -18,12 +24,12 @@
 
         <div class="product-details">
             <div class="product-images">
-                <!-- <div class="thumbnail-images">
-                    <img src="thumbnail1.jpg" alt="Thumbnail 1">
-                    <img src="thumbnail2.jpg" alt="Thumbnail 2">
-                    <img src="thumbnail3.jpg" alt="Thumbnail 3">
-                    <img src="thumbnail4.jpg" alt="Thumbnail 4">
-                </div> -->
+                <div class="thumbnail-images">
+                    <img src="assets/images/product_page_images/layout1.jpg" alt="Thumbnail 1">
+                    <img src="assets/images/product_page_images/layout2.jpg" alt="Thumbnail 2">
+                    <img src="assets/images/product_page_images/layout3.jpg" alt="Thumbnail 3">
+                    <img src="assets/images/product_page_images/layout4.jpg" alt="Thumbnail 4">
+                </div>
                 <div class="main-image">
                     <img src="assets/images/product_page_images/product1.jpg" alt="Main Product Image">
                 </div>
@@ -33,7 +39,11 @@
                 <h1>Smart Mobile Phone 7/7plus/8/8plus/X/Xr W 32 to 128GB</h1>
 
                 <div class="rating">
-                    <span>★★★★★</span>
+                    <span id ="1"class="fa fa-star"></span>
+                    <span id ="2"class="fa fa-star"></span>
+                    <span id ="3"class="fa fa-star"></span>
+                    <span id ="4"class="fa fa-star"></span>
+                    <span id ="5"class="fa fa-star"></span>
                     <a href="#">1 Review</a>
                     <a href="#">Add Review</a>
                 </div>
@@ -73,11 +83,32 @@
                     </div>
                     <button class="cart-button">Add to Cart</button>
                 </div>
+                <div class="product__details-action">
+                    <ul>
+                        <li><a href="#" title="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
+                        <li><a href="#" title="Compare"><i class="fas fa-sliders-h"></i></a></li>
+                        <li><a href="#" title="Print"><i class="fas fa-print"></i></a></li>
+                        <li><a href="#" title="Share"><i class="fas fa-share-alt"></i></a></li>
+                    </ul>
+                </div>
+                
             </div>
         </div>
+        <!-- Best selling Products -->
+         <div class="best-sellingProducts">
+            <h2>Best Selling Products</h2>
+            <div class="products-cards">
+                <div class="card">
+                    
+                </div>
+            </div>
+         </div>
     </main>
-    <footer></footer>
-    <script src="assets/js/load_components.js"></script>
+    
+    <!-- load footer from javascript file -->
+    <footer id="footer" ></footer>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/footer.js"></script>
     <script src="assets/js/product.js"></script>
 </body>
 

@@ -35,4 +35,18 @@ document.addEventListener("DOMContentLoaded", () => {
       quantityInput.value = 1;
     }
   });
+  // rating by stars
+  const stars = document.querySelectorAll(".fa-star");
+  stars.forEach((star) => {
+    star.addEventListener("click", () => {
+      var starId = Number(star.id);
+      for (let i = 0; i < starId; i++) {
+        stars[i].classList.add("checked");
+      }
+      console.log(starId);
+      for (let i = 4; i >= starId; i--) {
+        stars[i].classList.remove("checked");
+      }
+    });
+  });
 });
