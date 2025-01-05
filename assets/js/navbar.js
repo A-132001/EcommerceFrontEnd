@@ -1,5 +1,20 @@
-// open and close card
+document.addEventListener("DOMContentLoaded", () => {
+  let lastScrollY = window.scrollY;
+  const header = document.querySelector("header");
 
+<<<<<<< HEAD
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > lastScrollY) {
+      // Scrolling down: hide the header
+      header.style.transform = "translateY(-100%)";
+    } else {
+      // Scrolling up: show the header
+      header.style.transform = "translateY(0)";
+    }
+    lastScrollY = window.scrollY; // Update the last scroll position
+  });
+});
+=======
 function open_cart() {
   window.location.href = "./cart.html";
 }
@@ -52,3 +67,4 @@ function navbarContent() {
 
 let header = document.getElementById('header');
 header.innerHTML = navbarContent();
+>>>>>>> mostafa
