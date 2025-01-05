@@ -6,7 +6,9 @@ body {
   margin: 0;
   padding: 0;
 }
-
+.cart{
+  margin: 7rem 0;
+}
 .container {
   width: 91%;
   margin: 0 auto;

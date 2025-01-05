@@ -1,26 +1,71 @@
 //variables
 let cart = [];
 let cartContainer = document.getElementById("cart"),
-  cartTable = document.getElementById("cart-table");
+  cartTable = document.getElementById("cart-table"),
+  couponSection = document.getElementById("coupon-section"),
+  totalPricesSection = document.getElementById("total-prices-section");
 
 // Methods
-function inc(event) {
+function inc(event, id, p) {
+  event.preventDefault();
   const input = event.target.parentElement.querySelector("input");
   let value = parseInt(input.value) || 0;
   input.value = value + 1;
+  cart.forEach((product) => {
+    if (product.id == id) {
+      product.qty = ++value;
+    }
+  });
+  document.getElementById(`subtotal-${id}`).innerText =
+    "$" + (p * value).toFixed(2);
+  getTotal(cart).toFixed(2);
+  console.log(cart);
 }
-function dec(event) {
+function dec(event, id, p) {
+  event.preventDefault();
   const input = event.target.parentElement.querySelector("input");
   let value = parseInt(input.value) || 0;
   if (value > 1) {
     input.value = value - 1;
+    cart.forEach((p) => {
+      if (p.id == id) {
+        p.qty = --value;
+      }
+    });
+    document.getElementById(`subtotal-${id}`).innerText =
+      "$" + (p * value).toFixed(2);
+    getTotal(cart).toFixed(2);
   }
 }
-function removeProductFromCart(id) {
-    cart.filter(prod => prod.id !== id);
 
+function removeProductFromCart(id) {
+  if (!id) return alert("there are some thing wrong!");
+  const index = cart.findIndex((prod) => prod.id == id);
+  if (index !== -1) {
+    cart.splice(index, 1);
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  console.log(cart);
+  document.getElementById(id).remove();
+  if (cart.length === 0) {
+    cartTable.innerHTML = `<h3>No products in your cart!</h3>`;
+    couponSection.innerHTML = "";
+    totalPricesSection.innerHTML = "";
+    cartRow = "";
+  }
 }
-function cartTableContent(){
+function getTotal(userCart = []) {
+  if (userCart.length === 0) return;
+  const total = userCart.reduce(
+    (acc, product) => acc + product.price * product.qty,
+    0
+  );
+  document.getElementById("total-invice-contaner").innerText =
+    "$" + total.toFixed(2);
+  return total;
+}
+function cartTableContent() {
   return `
                 <thead>
                     <tr>
@@ -33,66 +78,133 @@ function cartTableContent(){
                     </tr>
                   </thead>
 
-                  <tbody>
-                    <tr>
-                      <td class="column-thumbnail">
-                        <a href="product-details.html">
-                          <img
-                            src="assets/images/product-2.jpeg"
-                            alt="Product Image"
-                          />
-                        </a>
-                      </td>
-                      <td class="column-name">
-                        <a href="product-details.html">Bakix Furniture</a>
-                      </td>
-                      <td class="column-price"><span>$130.00</span></td>
-                      <td class="column-quantity">
-                        <div class="cart-plus-minus">
-                          <input type="text" value="2"/>
-                          <button class="dec qtybutton" onclick='dec(event)'>-</button>
-                          <button class="inc qtybutton" onclick='inc(event)'>+</button>
-                        </div>
-                      </td>
-                      <td class="column-subtotal"><span>$130.00</span></td>
-                      <td class="column-remove">
-                        <span href="#">×</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="column-thumbnail">
-                        <a href="product-details.html">
-                          <img
-                            src="assets/images/product-1.jpeg"
-                            alt="Product Image"
-                          />
-                        </a>
-                      </td>
-                      <td class="column-name">
-                        <a href="product-details.html">Sujon Chair Set</a>
-                      </td>
-                      <td class="column-price"><span>$120.50</span></td>
-                      <td class="column-quantity">
-                        <div class="cart-plus-minus">
-                          <input type="text" value="1" />
-                          <button class="dec qtybutton" onclick='dec(event)'>-</button>
-                          <button class="inc qtybutton" onclick='inc(event)'>+</button>
-                        </div>
-                      </td>
-                      <td class="column-subtotal"><span>$120.50</span></td>
-                      <td class="column-remove">
-                        <span href="#">×</span>
-                      </td>
-                    </tr>
+                  <tbody id="cartRow">
+                    
                   </tbody>
     `;
-};
-cartTable.innerHTML = cartTableContent();
+}
+
+function createCouponSection() {
+  return `<div class="full-width">
+                  <div class="coupon-area">
+                    <div class="coupon-input">
+                      <input
+                        id="coupon-code"
+                        placeholder="Coupon code"
+                        type="text"
+                      />
+                      <button class="btn btn-border">Apply Coupon</button>
+                    </div>
+                    <div class="coupon-update">
+                      <button class="btn btn-border">Update Cart</button>
+                    </div>
+                  </div>
+                </div>`;
+}
+function createTotalPricesSection() {
+  return `
+            <div class="cart-summary">
+            <h2>Cart Totals</h2>
+            <ul>
+            <li>Total <span id="total-invice-contaner"></span></li>
+            </ul>
+            <span class="proceed-btn">Proceed to Checkout</span>
+            </div>
+  `;
+}
+
 const inputs = document.querySelectorAll(".cart-plus-minus input");
 inputs.forEach((input) => {
   input.addEventListener("input", (e) => {
     if (isNaN(e.target.value) || e.target.value < 1) {
-      e.target.value = 1; 
+      e.target.value = 1;
     }
   });
 });
+
+function setCartProduct({ id, name, price, description, image }) {
+  if (!id || !name || !price || !description || !image)
+    return window.alert("There are some thing wrong here!");
+
+  cart.push({ id, name, price, description, image, qty: 1 });
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+// cart Helper Functions
+function getCartProducts() {
+  let cartInLocalStorage = JSON.parse(localStorage.getItem("cart"));
+  if (cartInLocalStorage.length > 0) return cartInLocalStorage;
+  return null;
+}
+
+setCartProduct({
+  id: "product7",
+  name: "Gaming Mouse",
+  price: 69.99,
+  description: "Ergonomic gaming mouse with 16000 DPI sensor.",
+  image: "https://m.media-amazon.com/images/I/71C5DxSXaSL.jpg",
+});
+
+setCartProduct({
+  id: 5,
+  name: "Laptop",
+  price: 999.99,
+  description: "A high-performance laptop with 16GB RAM and 512GB SSD.",
+  image: "https://www.techtarget.com/rms/onlineimages/hp_elitebook_mobile.jpg",
+});
+
+console.log(getCartProducts());
+
+function renderCartProducts() {
+  if (!getCartProducts()) {
+    cartTable.innerHTML = `<h3>No products in your cart!</h3>`;
+  } else {
+    cartTable.innerHTML = cartTableContent();
+    couponSection.innerHTML = createCouponSection();
+    totalPricesSection.innerHTML = createTotalPricesSection();
+    cartRow = document.getElementById("cartRow");
+    getCartProducts().map((product) => {
+      cartRow.innerHTML += `
+                    <tr id=${product.id} key=${product.id}>
+                        <td class="column-thumbnail">
+                          <a href="product-details.html">
+                            <img
+                              src=${product.image}
+                              alt="Product"
+                            />
+                          </a>
+                        </td>
+                        <td class="column-name">
+                          <a href="product-details.html">${product.name}</a>
+                        </td>
+                        <td class="column-price"><span>$${
+                          product.price
+                        }</span></td>
+                        <td class="column-quantity">
+                          <div class="cart-plus-minus">
+                            <input type="text" value=${product.qty} />
+                            <button class="dec qtybutton" onclick='dec(event, "${
+                              product.id
+                            }", ${product.price})'>-</button>
+                            <button class="inc qtybutton" onclick='inc(event, "${
+                              product.id
+                            }", ${product.price})'>+</button>
+                          </div>
+                        </td>
+                        <td class="column-subtotal">
+                          <span id="subtotal-${product.id}">
+                          $${(product.price * product.qty).toFixed(2)}
+                          </span>
+                        </td>
+                        <td class="column-remove">
+                          <span href="#" onclick='removeProductFromCart("${
+                            product.id
+                          }")'>×</span>
+                        </td>
+                      </tr>
+      `;
+    });
+    getTotal(cart).toFixed(2);
+  }
+}
+renderCartProducts();
