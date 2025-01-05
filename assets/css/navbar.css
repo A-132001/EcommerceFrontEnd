@@ -4,8 +4,10 @@ header {
     left: 0;
     right: 0;
     height: auto; /* Adjust height as needed */
-    background-color: #ffff;
+    background-color: #fff; /* Ensure background is visible */
     z-index: 1000; /* Ensure it stays above other content */
+    transform: translateY(0); /* Initial position */
+    transition: transform 0.3s ease-in-out; /* Smooth slide effect */
 }
 
 header .top-nav

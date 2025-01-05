@@ -1,20 +1,38 @@
-function toggleFavorite() {
-  const starIcon = document.querySelector(".star-icon");
-  starIcon.classList.toggle("active");
-}
+document.addEventListener("DOMContentLoaded", () => {
+  // Update the main image when a thumbnail is clicked
+  const thumbnails = document.querySelectorAll(".thumbnail-images img");
+  const mainImage = document.querySelector(".main-image img");
 
-function rateProduct(rating) {
-  const stars = document.querySelectorAll(".stars .star");
-  stars.forEach((star, index) => {
-    if (index < rating) {
-      star.classList.add("active");
-    } else {
-      star.classList.remove("active");
+  thumbnails.forEach((thumbnail) => {
+    thumbnail.addEventListener("click", () => {
+      mainImage.src = thumbnail.src;
+    });
+  });
+
+  // Handle quantity increment and decrement
+  const decrementButton = document.querySelector(
+    ".quantity button:first-child"
+  );
+  const incrementButton = document.querySelector(".quantity button:last-child");
+  const quantityInput = document.querySelector(".quantity input");
+
+  decrementButton.addEventListener("click", () => {
+    let quantity = parseInt(quantityInput.value, 10);
+    if (quantity > 1) {
+      quantityInput.value = quantity - 1;
     }
   });
-  alert(`You rated this product ${rating} star(s). Thank you!`);
-}
 
-document.querySelector(".add-to-cart").addEventListener("click", function () {
-  alert("Product added to cart!");
+  incrementButton.addEventListener("click", () => {
+    let quantity = parseInt(quantityInput.value, 10);
+    quantityInput.value = quantity + 1;
+  });
+
+  // Validate input for quantity
+  quantityInput.addEventListener("input", () => {
+    let quantity = parseInt(quantityInput.value, 10);
+    if (isNaN(quantity) || quantity < 1) {
+      quantityInput.value = 1;
+    }
+  });
 });

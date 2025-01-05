@@ -1,10 +1,15 @@
-// open and close card
+document.addEventListener("DOMContentLoaded", () => {
+  let lastScrollY = window.scrollY;
+  const header = document.querySelector("header");
 
-var cart = document.querySelector(".cart");
-function open_cart() {
-  window.location.href = '/cart.html'
-  cart.classList.add("active");
-}
-function close_cart() {
-  cart.classList.remove("active");
-}
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > lastScrollY) {
+      // Scrolling down: hide the header
+      header.style.transform = "translateY(-100%)";
+    } else {
+      // Scrolling up: show the header
+      header.style.transform = "translateY(0)";
+    }
+    lastScrollY = window.scrollY; // Update the last scroll position
+  });
+});

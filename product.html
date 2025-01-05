@@ -4,52 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product - Page</title>
+    <title>Product Details</title>
     <link rel="stylesheet" href="assets/css/globals.css">
     <link rel="stylesheet" href="assets/css/product.css">
 </head>
 
 <body>
-    <!-- Navbar and Footer will be dynamically loaded -->
     <header></header>
-    <!-- Main Content -->
     <main>
-        <section class="content">
-            <div class="product-container">
-                <div class="product-image">
-                    <img src="assets/images/product_page_images/product1.jpg" alt="Product Image">
-                </div>
-                <div class="product-details">
-                    <h1>Smart Mobile Phone 7/7plus/8/8plus/X/Xr W 32 to 128GB</h1>
-                    <div class="review">
-                        <h3>Rate this product:</h3>
-                        <div class="stars">
-                            <span class="star" onclick="rateProduct(1)">&#9734;</span>
-                            <span class="star" onclick="rateProduct(2)">&#9734;</span>
-                            <span class="star" onclick="rateProduct(3)">&#9734;</span>
-                            <span class="star" onclick="rateProduct(4)">&#9734;</span>
-                            <span class="star" onclick="rateProduct(5)">&#9734;</span>
-                        </div>
-                        <p class="price">$99.99</p>
-                        <p class="description">Typi non habent claritatem insitam, est usus legentis in iis qui facit
-                            eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt
-                            saepius. Claritas est etiam processus. Lorem Ipsum has been the industry's standard dummy
-                            text ever since the 1500s, when anunknown printer took a galley of type and scrambled it to
-                            make a type specimen book.</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                        <div class="favorite">
-                            <span class="star-icon" onclick="toggleFavorite()">&#9734;</span>
-                        </div>
+        <div class="breadcrumb">
+            <a href="#">Home</a> > <span>Product Details</span>
+        </div>
 
-                    </div>
+        <div class="product-details">
+            <div class="product-images">
+                <!-- <div class="thumbnail-images">
+                    <img src="thumbnail1.jpg" alt="Thumbnail 1">
+                    <img src="thumbnail2.jpg" alt="Thumbnail 2">
+                    <img src="thumbnail3.jpg" alt="Thumbnail 3">
+                    <img src="thumbnail4.jpg" alt="Thumbnail 4">
+                </div> -->
+                <div class="main-image">
+                    <img src="assets/images/product_page_images/product1.jpg" alt="Main Product Image">
                 </div>
             </div>
-        </section>
+
+            <div class="product-info">
+                <h1>Smart Mobile Phone 7/7plus/8/8plus/X/Xr W 32 to 128GB</h1>
+
+                <div class="rating">
+                    <span>★★★★★</span>
+                    <a href="#">1 Review</a>
+                    <a href="#">Add Review</a>
+                </div>
+
+                <div class="price">
+                    <span class="current-price">$150.00</span>
+                    <span class="original-price">$320.00</span>
+                </div>
+
+                <div class="availability">
+                    Availability: <strong>In Stock</strong>
+                </div>
+
+                <div class="sku">
+                    SKU: Samsung C49J89: &pound;875, Debenhams Plus
+                </div>
+
+                <p>
+                    Typi non habent claritatem insitam, est usus legentis in iis qui facit eorum claritatem.
+                    Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam
+                    processus.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                </p>
+
+                <div class="stock">
+                    <strong>Hurry Up! Only 98 products left in stock.</strong>
+                    <div class="stock-bar">
+                        <div class="stock-filled" style="width: 80%;"></div>
+                    </div>
+                </div>
+
+                <div class="add-to-cart">
+                    <div class="quantity">
+                        <button>-</button>
+                        <input type="text" value="1">
+                        <button>+</button>
+                    </div>
+                    <button class="cart-button">Add to Cart</button>
+                </div>
+            </div>
+        </div>
     </main>
     <footer></footer>
-    <script src="assets/js/product.js"></script>
     <script src="assets/js/load_components.js"></script>
-
+    <script src="assets/js/product.js"></script>
 </body>
 
 </html>
