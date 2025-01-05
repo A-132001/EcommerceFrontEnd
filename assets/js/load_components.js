@@ -8,14 +8,6 @@ function loadComponent(selector, file) {
     })
     .then((html) => {
       document.querySelector(selector).innerHTML = html;
-
-      // Update the year in the footer (if loaded)
-      if (file === "footer.html") {
-        const yearElement = document.querySelector(".footer-year");
-        if (yearElement) {
-          yearElement.textContent = new Date().getFullYear();
-        }
-      }
     })
     .catch((error) => console.error(error));
 }

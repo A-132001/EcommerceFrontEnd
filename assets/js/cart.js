@@ -50,8 +50,8 @@ function cartTableContent(){
                       <td class="column-quantity">
                         <div class="cart-plus-minus">
                           <input type="text" value="2"/>
-                          <div class="dec qtybutton" onclick='dec(event)'>-</div>
-                          <div class="inc qtybutton" onclick='inc(event)'>+</div>
+                          <button class="dec qtybutton" onclick='dec(event)'>-</button>
+                          <button class="inc qtybutton" onclick='inc(event)'>+</button>
                         </div>
                       </td>
                       <td class="column-subtotal"><span>$130.00</span></td>
@@ -75,8 +75,8 @@ function cartTableContent(){
                       <td class="column-quantity">
                         <div class="cart-plus-minus">
                           <input type="text" value="1" />
-                          <div class="dec qtybutton" onclick='dec(event)'>-</div>
-                          <div class="inc qtybutton" onclick='inc(event)'>+</div>
+                          <button class="dec qtybutton" onclick='dec(event)'>-</button>
+                          <button class="inc qtybutton" onclick='inc(event)'>+</button>
                         </div>
                       </td>
                       <td class="column-subtotal"><span>$120.50</span></td>

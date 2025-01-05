@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-  width: 90%;
+  width: 91%;
   margin: 0 auto;
 }
 
@@ -89,6 +89,8 @@ body {
   cursor: pointer;
   font-size: 18px;
   font-weight: bold;
+  border: none;
+  background: none;
 }
 
 
