@@ -215,3 +215,76 @@
 .product__details-action ul li a i {
   pointer-events: none; /* Ensure the icon is not clickable */
 }
+
+/* Start best selling products section */
+.best-selling-header {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  border-bottom: 1px solid #fcb700;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-top: 40px;
+}
+.best-selling{
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.best-selling .card {
+  position: relative;
+  width: 20%;
+  margin: 20 20%;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  min-width: 230px;
+}
+.best-selling .card:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.best-selling .card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.best-selling .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.best-selling .card .price {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.best-selling .card .card-button {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  font-size: 10px;
+  background-color: #fcb700;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  /* Hidden by default */
+  transition: all 0.4s ease; /* Smooth transition for movement and visibility */;
+}
+.card:hover .card-button {
+  bottom: 38%; /* Move to the center of the card */
+    opacity: 1; /* Make it visible */
+    transform: translate(-50%, 50%); /* Center the button vertically */
+    pointer-events: auto; /* Enable interaction */
+}
+/* End best selling products section */
