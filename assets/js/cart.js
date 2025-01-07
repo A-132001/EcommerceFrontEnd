@@ -208,3 +208,18 @@ function renderCartProducts() {
   }
 }
 renderCartProducts();
+
+// let str1 = 'mostafa',
+//     str2 = 'mostafa';
+
+// console.log(str1.localeCompare(str2));
+
+
+function multiplier(factor) {
+  return function(x) {
+      return x * factor;
+  };
+}
+// const double = multiplier(2);
+console.log(multiplier(2)(5)); // Output: 10
+
