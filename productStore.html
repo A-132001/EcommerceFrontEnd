@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="circle.css">
+  <link rel="stylesheet" href="assets/css/productStore.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/globals.css">
+
+</head>
+
+<body>
+  <header id="header"></header>
+  <div id="scroll-to-top">
+    <svg width="50" height="50" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="45" stroke="#ccc" stroke-width="10" fill="none"></circle>
+      <circle id="progress-circle" cx="50" cy="50" r="45" stroke="#000" stroke-width="10" fill="none"
+        stroke-dasharray="282.6" stroke-dashoffset="282.6"></circle>
+    </svg>
+    <span>&uarr;</span>
+  </div>
+
+  <div id="productData"></div>
+  <hr class="hrStyle">
+  </div>
+
+  <div class="store-links">
+  </div>
+  <footer id="footer"></footer>
+  <script>
+
+    window.onload = function () {
+
+      document.body.style.display = 'block';
+    }
+  </script>
+  <script src="circle.js"></script>
+  <script src="assets/js/productStore.js"></script>
+
+  <!-- Load Components -->
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/footer.js"></script
+
+</body>
+
+</html>
