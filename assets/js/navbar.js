@@ -9,7 +9,7 @@ function navbarContent() {
   return `
       <header>
         <div class="container top-nav">
-            <a href="#" class="logo"><img src="./assets/images/logo-black.png" alt=""></a>
+            <a href="#" class="logo"><img src="assets/images/homePage/logo-black.png" alt=""></a>
             <form action="" class="search">
                 <input type="search" placeholder="Search for products ...">
                 <button type="submit">Search</button>
@@ -29,15 +29,15 @@ function navbarContent() {
         <nav>
             <div class="links container">
                 <ul>
-                    <li class="active"><a href="./index.html">Home</a></li>
-                    <li><a href="">all products</a></li>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="productStore.html">all products</a></li>
                     <li><a href="">about us</a></li>
                     <li><a href="">contact</a></li>
                 </ul>
 
                 <div class="loging_signup">
-                    <a href="#">login<i class="fa-light fa-arrow-right-to-bracket"></i> </a>
-                    <a href="#">sign up<i class="fa-solid fa-user-plus"></i></a>
+                    <a href="login.html">login<i class="fa-light fa-arrow-right-to-bracket"></i> </a>
+                    <a href="signup.html">sign up<i class="fa-solid fa-user-plus"></i></a>
 
                 </div>
             </div>
