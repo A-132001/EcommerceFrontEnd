@@ -119,8 +119,10 @@ function footerContent() {
                         </div>
                         <div class="app_store">
                             <h4>Download The App - Get 30% Sale Coupon</h4>
-                            <a href="#"><img src="../images/footer_images/app-store-copy.jpg" alt=""></a>
+                            <a href="#"><img src="./assets/images/footer_images/app-store.jpg" alt=""></a>
                         </div>
+
+                       
             
         </div>
 
