@@ -13,7 +13,7 @@
           "id": "product2",
           "name": "Wireless Mouse",
           "price": 25.99,
-          "description": "A sleek and ergonomic wireless mouse.",
+          "description": "A sleek and ergonomic and Rechargeable wireless mouse.",
           "image": "https://image.made-in-china.com/2f0j00iagUrMDIISot/Slim-Wireless-Mouse-1200-Dpi.jpg"
         },
         {
@@ -492,3 +492,6 @@
         ]        
       }
     }
+
+
+    

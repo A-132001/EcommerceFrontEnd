@@ -1,5 +1,5 @@
 //variables
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [] ;
 let cartContainer = document.getElementById("cart"),
   cartTable = document.getElementById("cart-table"),
   couponSection = document.getElementById("coupon-section"),
@@ -56,7 +56,7 @@ function removeProductFromCart(id) {
   }
 }
 function getTotal(userCart = []) {
-  if (userCart.length === 0) return;
+  if (userCart.length === 0) return [];
   const total = userCart.reduce(
     (acc, product) => acc + product.price * product.qty,
     0
@@ -137,21 +137,21 @@ function getCartProducts() {
   return null;
 }
 
-setCartProduct({
-  id: "product7",
-  name: "Gaming Mouse",
-  price: 69.99,
-  description: "Ergonomic gaming mouse with 16000 DPI sensor.",
-  image: "https://m.media-amazon.com/images/I/71C5DxSXaSL.jpg",
-});
+// setCartProduct({
+//   id: "product7",
+//   name: "Gaming Mouse",
+//   price: 69.99,
+//   description: "Ergonomic gaming mouse with 16000 DPI sensor.",
+//   image: "https://m.media-amazon.com/images/I/71C5DxSXaSL.jpg",
+// });
 
-setCartProduct({
-  id: 5,
-  name: "Laptop",
-  price: 999.99,
-  description: "A high-performance laptop with 16GB RAM and 512GB SSD.",
-  image: "https://www.techtarget.com/rms/onlineimages/hp_elitebook_mobile.jpg",
-});
+// setCartProduct({
+//   id: 5,
+//   name: "Laptop",
+//   price: 999.99,
+//   description: "A high-performance laptop with 16GB RAM and 512GB SSD.",
+//   image: "https://www.techtarget.com/rms/onlineimages/hp_elitebook_mobile.jpg",
+// });
 
 console.log(getCartProducts());
 
