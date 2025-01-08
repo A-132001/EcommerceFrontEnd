@@ -145,145 +145,147 @@
       ]
       
     },
-    "store2": {
-      "name": "Fashion Hub",
-      "products": [
-        {
-          "id": "1",
-          "name": "Jeans",
-          "price": 49.99,
-          "description": "Stylish slim fit jeans for everyday wear.",
-          "image": "https://example.com/images/jeans.jpg"
-        },
-        {
-          "id": "2",
-          "name": "Leather Jacket",
-          "price": 199.99,
-          "description": "Premium quality leather jacket with a timeless design.",
-          "image": "https://example.com/images/jacket.jpg"
-        },
-        {
-          "id": "3",
-          "name": "T-Shirt",
-          "price": 19.99,
-          "description": "Cotton T-shirt with a comfortable fit.",
-          "image": "https://example.com/images/tshirt.jpg"
-        },
-        {
-          "id": "4",
-          "name": "Sneakers",
-          "price": 79.99,
-          "description": "Trendy sneakers with a cushioned sole.",
-          "image": "https://example.com/images/sneakers.jpg"
-        },
-        {
-          "id": "5",
-          "name": "Sweater",
-          "price": 49.99,
-          "description": "Soft and warm sweater, perfect for cold weather.",
-          "image": "https://example.com/images/sweater.jpg"
-        },
-        {
-          "id": "6",
-          "name": "Dress",
-          "price": 89.99,
-          "description": "Elegant dress suitable for both casual and formal occasions.",
-          "image": "https://example.com/images/dress.jpg"
-        },
-        {
-          "id": "7",
-          "name": "Blazer",
-          "price": 129.99,
-          "description": "Stylish blazer for business or casual wear.",
-          "image": "https://example.com/images/blazer.jpg"
-        },
-        {
-          "id": "8",
-          "name": "Shorts",
-          "price": 34.99,
-          "description": "Comfortable shorts for warm weather.",
-          "image": "https://example.com/images/shorts.jpg"
-        },
-        {
-          "id": "9",
-          "name": "Scarf",
-          "price": 19.99,
-          "description": "Soft scarf to complement your outfit.",
-          "image": "https://example.com/images/scarf.jpg"
-        },
-        {
-          "id": "10",
-          "name": "Cap",
-          "price": 14.99,
-          "description": "Stylish cap for everyday wear.",
-          "image": "https://example.com/images/cap.jpg"
-        },
-        {
-          "id": "11",
-          "name": "Handbag",
-          "price": 69.99,
-          "description": "Elegant handbag with multiple compartments.",
-          "image": "https://example.com/images/handbag.jpg"
-        },
-        {
-          "id": "12",
-          "name": "Watch",
-          "price": 199.99,
-          "description": "Classic wristwatch with leather strap.",
-          "image": "https://example.com/images/watch.jpg"
-        },
-        {
-          "id": "13",
-          "name": "Boots",
-          "price": 119.99,
-          "description": "Stylish boots with a durable sole.",
-          "image": "https://example.com/images/boots.jpg"
-        },
-        {
-          "id": "14",
-          "name": "Sunglasses",
-          "price": 49.99,
-          "description": "Trendy sunglasses to protect your eyes from the sun.",
-          "image": "https://example.com/images/sunglasses.jpg"
-        },
-        {
-          "id": "15",
-          "name": "Belt",
-          "price": 29.99,
-          "description": "Leather belt with a sleek design.",
-          "image": "https://example.com/images/belt.jpg"
-        },
-        {
-          "id": "16",
-          "name": "Suit",
-          "price": 249.99,
-          "description": "Tailored suit for formal occasions.",
-          "image": "https://example.com/images/suit.jpg"
-        },
-        {
-          "id": "17",
-          "name": "Hoodie",
-          "price": 39.99,
-          "description": "Comfortable hoodie for a casual look.",
-          "image": "https://example.com/images/hoodie.jpg"
-        },
-        {
-          "id": "18",
-          "name": "Slippers",
-          "price": 19.99,
-          "description": "Cozy slippers for indoor wear.",
-          "image": "https://example.com/images/slippers.jpg"
-        },
-        {
-          "id": "19",
-          "name": "Jacket",
-          "price": 89.99,
-          "description": "Warm jacket for chilly weather.",
-          "image": "https://example.com/images/jacket2.jpg"
-        }
-      ]
+
       
+   "store2": {
+  "name": "Fashion Hub",
+  "products": [
+    {
+      "id": "1",
+      "name": "Jeans",
+      "price": 49.99,
+      "description": "Stylish slim fit jeans for everyday wear.",
+      "image": "https://images.unsplash.com/photo-1596877430058-7b660209e9c4"
     },
+    {
+      "id": "2",
+      "name": "Leather Jacket",
+      "price": 199.99,
+      "description": "Premium quality leather jacket with a timeless design.",
+      "image": "https://images.unsplash.com/photo-1534009028091-a4582e86d8d9"
+    },
+    {
+      "id": "3",
+      "name": "T-Shirt",
+      "price": 19.99,
+      "description": "Cotton T-shirt with a comfortable fit.",
+      "image": "https://images.unsplash.com/photo-1618354691686-83b8c4c1f5e2"
+    },
+    {
+      "id": "4",
+      "name": "Sneakers",
+      "price": 79.99,
+      "description": "Trendy sneakers with a cushioned sole.",
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
+    },
+    {
+      "id": "5",
+      "name": "Sweater",
+      "price": 49.99,
+      "description": "Soft and warm sweater, perfect for cold weather.",
+      "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246"
+    },
+    {
+      "id": "6",
+      "name": "Dress",
+      "price": 89.99,
+      "description": "Elegant dress suitable for both casual and formal occasions.",
+      "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246"
+    },
+    {
+      "id": "7",
+      "name": "Blazer",
+      "price": 129.99,
+      "description": "Stylish blazer for business or casual wear.",
+      "image": "https://images.unsplash.com/photo-1602810319429-9440b4b2fc03"
+    },
+    {
+      "id": "8",
+      "name": "Shorts",
+      "price": 34.99,
+      "description": "Comfortable shorts for warm weather.",
+      "image": "https://images.unsplash.com/photo-1589994965851-a8f479cba5d5"
+    },
+    {
+      "id": "9",
+      "name": "Scarf",
+      "price": 19.99,
+      "description": "Soft scarf to complement your outfit.",
+      "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7"
+    },
+    {
+      "id": "10",
+      "name": "Cap",
+      "price": 14.99,
+      "description": "Stylish cap for everyday wear.",
+      "image": "https://images.unsplash.com/photo-1603252109360-6ec3d6f6d6d1"
+    },
+    {
+      "id": "11",
+      "name": "Handbag",
+      "price": 69.99,
+      "description": "Elegant handbag with multiple compartments.",
+      "image": "https://images.unsplash.com/photo-1589443562688-315d6a1fbe29"
+    },
+    {
+      "id": "12",
+      "name": "Watch",
+      "price": 199.99,
+      "description": "Classic wristwatch with leather strap.",
+      "image": "https://images.unsplash.com/photo-1516726817505-f5ed825624e1"
+    },
+    {
+      "id": "13",
+      "name": "Boots",
+      "price": 119.99,
+      "description": "Stylish boots with a durable sole.",
+      "image": "https://images.unsplash.com/photo-1599940836081-541d29a64d1e"
+    },
+    {
+      "id": "14",
+      "name": "Sunglasses",
+      "price": 49.99,
+      "description": "Trendy sunglasses to protect your eyes from the sun.",
+      "image": "https://images.unsplash.com/photo-1514311548105-06c33a7d5c94"
+    },
+    {
+      "id": "15",
+      "name": "Belt",
+      "price": 29.99,
+      "description": "Leather belt with a sleek design.",
+      "image": "https://images.unsplash.com/photo-1590457075641-3c3b5d7e7061"
+    },
+    {
+      "id": "16",
+      "name": "Suit",
+      "price": 249.99,
+      "description": "Tailored suit for formal occasions.",
+      "image": "https://images.unsplash.com/photo-1591076482161-24a7d1d73c1f"
+    },
+    {
+      "id": "17",
+      "name": "Hoodie",
+      "price": 39.99,
+      "description": "Comfortable hoodie for a casual look.",
+      "image": "https://images.unsplash.com/photo-1618354691686-83b8c4c1f5e2"
+    },
+    {
+      "id": "18",
+      "name": "Slippers",
+      "price": 19.99,
+      "description": "Cozy slippers for indoor wear.",
+      "image": "https://images.unsplash.com/photo-1599940267762-102d08e363f9"
+    },
+    {
+      "id": "19",
+      "name": "Jacket",
+      "price": 89.99,
+      "description": "Warm jacket for chilly weather.",
+      "image": "https://images.unsplash.com/photo-1605733160314-4fc7dac4bb16"
+    }
+  ]
+}
+,
     "store3": {
         "name": "Home Goods",
         "products": [

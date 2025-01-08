@@ -122,6 +122,8 @@ inputs.forEach((input) => {
   });
 });
 
+
+// cart Helper Functions
 function setCartProduct({ id, name, price, description, image }) {
   if (!id || !name || !price || !description || !image)
     return window.alert("There are some thing wrong here!");
@@ -130,7 +132,7 @@ function setCartProduct({ id, name, price, description, image }) {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-// cart Helper Functions
+
 function getCartProducts() {
   let cartInLocalStorage = JSON.parse(localStorage.getItem("cart"));
   if (cartInLocalStorage.length > 0) return cartInLocalStorage;
