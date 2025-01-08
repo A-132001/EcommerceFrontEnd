@@ -209,17 +209,23 @@ function renderCartProducts() {
 }
 renderCartProducts();
 
-// let str1 = 'mostafa',
-//     str2 = 'mostafa';
 
-// console.log(str1.localeCompare(str2));
-
-
-function multiplier(factor) {
-  return function(x) {
-      return x * factor;
-  };
+function memoize(fn) {
+    
+  return function(...args) {
+      
+  }
 }
-// const double = multiplier(2);
-console.log(multiplier(2)(5)); // Output: 10
+
+
+
+let callCount = 0;
+const memoizedFn = memoize(function (a, b) {
+callCount += 1;
+ return a + b;
+})
+memoizedFn(2, 3) // 5
+memoizedFn(2, 3) // 5
+console.log(callCount) // 1 
+
 
