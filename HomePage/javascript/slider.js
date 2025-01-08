@@ -1,17 +1,4 @@
-/* swiper slide*/
 
-var swiper = new Swiper(".slide-swp", {
-    pagination: {
-      el: ".swiper-pagination",
-      dynamicBullests:true,
-      clickable: true
-    },
-    autoplay:
-    {
-        delay:2500,
-    },
-    loop:true 
-  });
 
 
   var swiper = new Swiper(".sale_sec", {
@@ -26,11 +13,6 @@ var swiper = new Swiper(".slide-swp", {
     autoplay:
     {
         delay:5000,
-    },
-    navigation:
-    {
-        nextEl:".swiper-button-next",
-        prevEl:".swiper-button-prev",
     },
     loop:true 
   });
