@@ -1,19 +1,21 @@
 xhr = new XMLHttpRequest();
-xhr.open("GET", "ecommerce.json", true);
-xhr.send();
+xhr.open("GET", "https://fake-products-api-kappa.vercel.app/api/products");
+
 var data = [];
 var elements = document.getElementById("productData");
 var members = document.getElementById("store-links");
-xhr.onreadystatechange = function () {
-  if (this.status === 200 && this.readyState === 4) {
-    data = JSON.parse(this.responseText);
-    console.log(data);
+xhr.onload = function () {
+  if (xhr.status === 200) {
+    const response = JSON.parse(xhr.responseText);
+    console.log(response);
+    
+    const user = response.data;
     displayName();
     displayProductsStore1(data.store1.products);
     displayStores(data.stores.names);
   }
 };
-
+xhr.send();
 function displayName() {
   var element = document.createElement("h2");
   element.classList.add("styleH2");
