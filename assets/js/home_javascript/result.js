@@ -1,6 +1,6 @@
 const searchTerm = localStorage.getItem("searchTerm");
 const xhr = new XMLHttpRequest();
-xhr.open("GET", "./javascript/items.json", true);
+xhr.open("GET", "https://fake-products-api-kappa.vercel.app/api/products", true);
 xhr.onload = function () {
     if (xhr.status === 200) {
         const data = JSON.parse(xhr.responseText);

@@ -6,7 +6,8 @@
     list-style: none;
     font-family:'Rubik','sans-serif'  ;
     font-size: medium;
-    font-weight:bold
+    font-weight:bold;
+    /* outline: #db2f26 solid 1px;   // for debugging styles */ 
 }
 :root{
     --main-color:#fcb700;
@@ -16,15 +17,7 @@
     --border-color:#6666662a;
     --name-item:#0066c0;
 }
-body {
-    background: #f5f6f9;
-    margin: 0;
-    height: 100vh; 
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    overflow-x: hidden;
-}
+
 /*=========================================Login&signup Style================================*/
 header .links .loging_signup a{
     color: var(--dark-color);
@@ -36,18 +29,14 @@ header .links .loging_signup a{
 }
 
   .login,
-  .signin{
-    width: 100%;
-    margin: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .signin{ 
+    margin: 5%;
   }
   .containerlog{
     width: 600px;
-    height: 900px;
     background: white;
-    box-shadow: rgba(red,green,blue)5px,15px;
+    box-shadow: rgba(255, 0, 0, 0.5) 5px 15px;
+
     box-sizing: border-box;
     padding: 20px 30px;
     justify-content: center;
@@ -77,6 +66,7 @@ header .links .loging_signup a{
     padding: 12px 15px;
     justify-content: space-between;
     width: 400px;
+    margin: 1vh;
   }
   .form input:focus{
     border-color: var(--main-color);
