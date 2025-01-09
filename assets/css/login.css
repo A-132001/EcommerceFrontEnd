@@ -1,14 +1,4 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    font-family:'Rubik','sans-serif'  ;
-    font-size: medium;
-    font-weight:bold;
-    /* outline: #db2f26 solid 1px;   // for debugging styles */ 
-}
+
 :root{
     --main-color:#fcb700;
     --dark-color:#222222;
