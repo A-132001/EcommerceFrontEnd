@@ -134,7 +134,7 @@ function setCartProduct({ id, name, price, description, image }) {
 
 
 function getCartProducts() {
-  let cartInLocalStorage = JSON.parse(localStorage.getItem("cart"));
+  let cartInLocalStorage = JSON.parse(localStorage.getItem("cart")) || [];
   if (cartInLocalStorage.length > 0) return cartInLocalStorage;
   return null;
 }
