@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--style css-->
+        <link rel="stylesheet" href="home_page.css">
+        <!--font from cdn website-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="../assets/css/result.css">
+      
+        
+<title>HomePage</title>
+</head>
+<body>
+    <header>
+        <div class="container top-nav">
+            <a href="" class="logo"><img src="../assets/images/homePage/logo-black.png" alt=""></a>
+            <form action="./result.html" class="search">
+                <input type="search" id="searchInput" placeholder="Search for products ...">
+                <button type="submit" id="searchButton">Search</button>
+              </form>  
+
+            <div class="cart_header">
+                <div onclick="open_cart()" class="icon_cart">
+                    <i class="fa-solid fa-bag-shopping"></i>   
+                    <span class="count_item">0</span>
+                </div>
+                <div class="total_price">
+                    <p>My Cart:</p>
+                    <p class="class_cart_Head">$0</p>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="links container">
+                <ul>
+                 <li><a href="">Home</a></li>
+                 <li><a href="">all product</a></li>
+                 <li><a href="../About.html">About us</a></li>
+                 <li><a href="../contactus.html">Contact</a></li>
+
+                </ul>
+                <div class="loging_signup">
+                    <a href="C:\Users\Gehad\OneDrive\Desktop\webprojectiti\login.html">login<i class="fa-light fa-arrow-right-to-bracket"></i> </a>
+                    <a href="C:\Users\Gehad\OneDrive\Desktop\webprojectiti\signup.html">sign up<i class="fa-solid fa-user-plus"></i></a>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="cart">
+        <div class="top_cart">
+            <h3>My cart <span>(0 item in cart)</span></h3>
+            <span onclick="close_cart()" class="close_cart"><i class="fa-solid fa-circle-xmark"></i></span>
+
+        </div>
+        <div class="items_in_cart">
+            <div class="item_cart">
+                <img src="../assets/images/homePage/product-1.jpg" alt="">
+                <div class="content">
+                    <h4>Lorem ipsum dolor sit amet.</h4>
+                    <p class="price_cart">$140</p>
+                </div>
+                <button class="delete_item">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
+
+                </button>
+            </div>
+            <div class="item_cart">
+                <img src="../assets/images/homePage/product-2.jpg" alt="">
+                <div class="content">
+                    <h4>Lorem ipsum dolor sit amet.</h4>
+                    <p class="price_cart">$140</p>
+                </div>
+                <button class="delete_item">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
+
+                </button>
+            </div>
+
+        </div>
+
+        <div class="bottom_cart">
+         
+            <div class="button_Cart">
+                <a href="#" class="btn_cart">Proceed to checkout</a>
+    
+            </div>
+        </div>
+    </div>
+
+
+    <section class="slider">
+        <div class="container">
+            <div class="sidebar">
+                <h2><i class="fa-solid fa-bars"></i> Shop by Brands</h2>
+                <a href="#">Tech Store</a>
+                <a href="#">Fashion Hub</a>
+                <a href="#">Home Goods</a>
+                <a href="#">Sports Gear</a>
+                <a href="#">Nike Air </a>
+                <a href="#">Blue Ribbon</a>
+                <a href="#">Apple Watch </a>
+                <a href="#">Samsung Galaxy</a>
+            </div>
+    
+            <div class="slide-swp">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#"><img src="../assets/images/homePage/slider-01.jpg" alt="Slide 1"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img src="../assets/images/homePage/slider-02.jpg" alt="Slide 2"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img src="../assets/images/homePage/slider-03.jpg" alt="Slide 3"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="features">
+        <div class="container">
+            <div class="feature_item">
+                <img src="../assets/images/homePage/features1.png" alt="">
+                <div class="text">
+                    <h2>free shpping</h2>
+                    <p>ree shoppinh on all order</p>
+                </div>
+            </div>
+
+            <div class="feature_item">
+                <img src="../assets/images/homePage/features2.png" alt="">
+                <div class="text">
+                    <h2>free shpping</h2>
+                    <p>ree shoppinh on all order</p>
+                </div>
+            </div>
+
+            <div class="feature_item">
+                <img src="../assets/images/homePage/features3.png" alt="">
+                <div class="text">
+                    <h2>free shpping</h2>
+                    <p>ree shoppinh on all order</p>
+                </div>
+            </div>
+
+            <div class="feature_item">
+                <img src="../assets/images/homePage/features4.png" alt="">
+                <div class="text">
+                    <h2>free shpping</h2>
+                    <p>ree shoppinh on all order</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <secttion class="banner">
+        <div class="container">
+            <div class="banner_img">
+                <div class="glass_hover"></div>
+                    <a href="#"></a>
+                        <img src="../assets/images/homePage/banner-1.jpg" alt="">
+                
+            </div>
+
+            <div class="banner_img">
+                <div class="glass_hover"></div>
+                    <a href="#"></a>
+                    <img src="../assets/images/homePage/banner-2.jpg" alt="">
+                
+            </div>
+
+            <div class="banner_img">
+                <div class="glass_hover"></div>
+                    <a href="#"></a>
+                        <img src="../assets/images/homePage/banner-3.jpg" alt="">
+                
+            </div>
+        </div>
+    </secttion>
+
+     
+    <section class="slide slide_sale">
+        <div class="container">
+            <div class="sale_sec mySwiper">
+                <div class="top_slide">
+                    <h2>onsale <span>product</span></h2>
+                </div>
+
+
+                <div class="products swiper-wrapper">
+
+                    <div class="product swiper-slide">
+                        <div class="icons">
+                            <span><i class="fa-solid fa-cart-plus"></i> </span>   
+                            <span><i class="fa-solid fa-heart"></i></span> 
+                            <span><i class="fa-solid fa-share"></i></span>
+                          </div>
+                      <span class="sale_present">%10</span>
+                        <div class="img_product">
+                            <img src="../assets/images/homePage/product-1.jpg" alt="">
+                            <img src="../assets/images/homePage/product-2.jpg" alt="" class="img_hover">
+                        </div>
+                        <h3 class="name_product"><a href="">Lorem ipsum dolor sit amet.</a></h3>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <div class="price">
+                            <p><span>$220</span></p>
+                             <p class="old_price">$240</p>
+                        </div>
+
+
+                    </div>
+
+
+
+                .
+
+                 
+               
+
+               
+
+
+                 
+               
+
+                
+            </div>
+        </div>
+    </section>
+       
+
+      
+
+
+              
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+  <!-- Initialize Swiper -->
+  <script src="./javascript/slider.js">
+   
+  </script>
+<script src="./javascript/items.json"></script>
+  <script src="./javascript/cart.js"></script>
+  <script src="./javascript/items_home.js"></script>
+  <script src="./javascript/result.js"></script>
+  <script src="./javascript/search.js"></script>
+  <script src="./javascript/sliderhead.js"></script>
+
+</body>
+</html>

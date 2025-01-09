@@ -382,7 +382,6 @@ transition: 0.3s ease;
 .slider .container .sidebar
 {
     width:300px;
-    /* position: relative; */
     background: #fff;
     display: flex;
     flex-direction: column;
@@ -449,6 +448,8 @@ transition: 0.3s ease;
     height: 8px !important;
     border-radius:30px !important ;
 }
+
+
 
 /*end slider*/
 
