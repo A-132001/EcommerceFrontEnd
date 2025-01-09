@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family:'Rubik','sans-serif'  ;
+    font-size: medium;
+    font-weight:bold;
+    /* outline: #db2f26 solid 1px;   // for debugging styles */ 
+}
+:root{
+    --main-color:#fcb700;
+    --dark-color:#222222;
+    --parg-color:#666666;
+    --dark-red:#d01418;
+    --border-color:#6666662a;
+    --name-item:#0066c0;
+}
+
+/*=========================================Login&signup Style================================*/
+header .links .loging_signup a{
+    color: var(--dark-color);
+    padding: 10px 20px ;
+    background-color: var(--main-color);
+    margin-left: 10px;
+    border-radius: 5px;
+
+}
+
+  .login,
+  .signin{ 
+    margin: 5%;
+  }
+  .containerlog{
+    width: 600px;
+    background: white;
+    box-shadow: rgba(255, 0, 0, 0.5) 5px 15px;
+
+    box-sizing: border-box;
+    padding: 20px 30px;
+    justify-content: center;
+    margin: 20px auto;
+ 
+  }
+  .title{
+    color: var(--dark-color);
+    text-align: center;
+    margin: 10px 0 30px;
+    font-size: 40px;
+    font-weight: 800;
+  }
+  .form{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 150px;
+    justify-content: center;
+  }
+
+  .form input{
+    border-radius: 5px;
+    border: 5px solid #6666662a;
+    outline: 0;
+    padding: 12px 15px;
+    justify-content: space-between;
+    width: 400px;
+    margin: 1vh;
+  }
+  .form input:focus{
+    border-color: var(--main-color);
+  }
+  .page-link{
+    margin: 0;
+    text-align: end;
+    color: var(--parg-color);
+  }
+.form p{
+    color: var(--main-color);
+}
+  .page-link .Sign-up{
+    color: var(--parg-color);
+    font-size: 12px;
+    transition: 0.3s;
+  }
+  .page-link .page{
+    color: var(--main-color);
+  }
+  .bnt-login{
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+    background: var(--main-color);
+    color: white;
+    cursor: pointer;
+    box-shadow: rgba(0, 0,0, 0.25)0px 3px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: space-between;
+  }
+  .Sign-up{
+    margin: 0;
+    font-size: 12px;
+    color: var(--parg-color);
+  }
+  .Sign-up .sing{
+    color: var(--main-color);
+    font-size: 14px;
+    margin-left: 2px;
+    text-decoration: underline;
+  } 

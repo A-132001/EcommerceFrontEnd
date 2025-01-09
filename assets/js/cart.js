@@ -122,6 +122,8 @@ inputs.forEach((input) => {
   });
 });
 
+
+// cart Helper Functions
 function setCartProduct({ id, name, price, description, image }) {
   if (!id || !name || !price || !description || !image)
     return window.alert("There are some thing wrong here!");
@@ -130,9 +132,9 @@ function setCartProduct({ id, name, price, description, image }) {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-// cart Helper Functions
+
 function getCartProducts() {
-  let cartInLocalStorage = JSON.parse(localStorage.getItem("cart"));
+  let cartInLocalStorage = JSON.parse(localStorage.getItem("cart")) || [];
   if (cartInLocalStorage.length > 0) return cartInLocalStorage;
   return null;
 }
@@ -209,17 +211,23 @@ function renderCartProducts() {
 }
 renderCartProducts();
 
-// let str1 = 'mostafa',
-//     str2 = 'mostafa';
 
-// console.log(str1.localeCompare(str2));
-
-
-function multiplier(factor) {
-  return function(x) {
-      return x * factor;
-  };
+function memoize(fn) {
+    
+  return function(...args) {
+      
+  }
 }
-// const double = multiplier(2);
-console.log(multiplier(2)(5)); // Output: 10
+
+
+
+let callCount = 0;
+const memoizedFn = memoize(function (a, b) {
+callCount += 1;
+ return a + b;
+})
+memoizedFn(2, 3) // 5
+memoizedFn(2, 3) // 5
+console.log(callCount) // 1 
+
 
