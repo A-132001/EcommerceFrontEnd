@@ -25,7 +25,7 @@ header .links .loging_signup a{
   .containerlog{
     width: 600px;
     background: white;
-    box-shadow: rgba(255, 0, 0, 0.5) 5px 15px;
+    box-shadow: #dedede 5px 15px;
 
     box-sizing: border-box;
     padding: 20px 30px;

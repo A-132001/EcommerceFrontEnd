@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/circle.css">
+
     <link rel="stylesheet" href="assets/css/globals.css" />
     <link rel="stylesheet" href="./assets/css/cart.css" />
     <link
@@ -32,10 +34,19 @@
         </div>
       </div>
     </section>
+    <div id="scroll-to-top">
+      <svg width="50" height="50" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="45" stroke="#ccc" stroke-width="10" fill="none"></circle>
+        <circle id="progress-circle" cx="50" cy="50" r="45" stroke="#000" stroke-width="10" fill="none"
+          stroke-dasharray="282.6" stroke-dashoffset="282.6"></circle>
+      </svg>
+      <span>&uarr;</span>
+    </div>
 
     <footer id="footer"></footer>
     <script src="./assets/js/cart.js"></script>
     <script src="./assets/js/navbar.js"></script>
     <script src="./assets/js/footer.js"></script>
+    <script src="assets/js/circle.js"></script>
   </body>
 </html>

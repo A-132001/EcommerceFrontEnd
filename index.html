@@ -4,16 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/circle.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/globals.css">
+
     <title>HomePage</title>
 </head>
 
 <body>
     <header id="header"></header>
-
     <div class="cart">
         <div class="top_cart">
             <h3>My cart <span>(0 item in cart)</span></h3>
@@ -51,9 +53,7 @@
 
                 </button>
             </div>
-
         </div>
-
         <div class="bottom_cart">
 
             <div class="button_Cart">
@@ -61,8 +61,6 @@
             </div>
         </div>
     </div>
-
-
     <section class="slider">
         <div class="container">
             <div class="sidebar">
@@ -165,43 +163,21 @@
                 </div>
 
 
-                <div class="products swiper-wrapper">
-
-                    <div class="product swiper-slide">
-                        <div class="icons">
-                            <span ><i id="add-to-cart-icon" class="fa-solid fa-cart-plus"></i> </span>
-                            <span><i class="fa-solid fa-heart"></i></span>
-                            <span><i class="fa-solid fa-share"></i></span>
-                        </div>
-                        <span class="sale_present">%10</span>
-                        <div class="img_product">
-                            <img src="assets/images/homePage/product-1.jpg" alt="">
-                            <img src="assets/images/homePage/product-2.jpg" alt="" class="img_hover">
-                        </div>
-                        <h3 class="name_product"><a href="">Lorem ipsum dolor sit amet.</a></h3>
-
-                        <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-
-                        <div class="price">
-                            <p><span>$220</span></p>
-                            <p class="old_price">$240</p>
-                        </div>
-
-
-                    </div>
-                </div>
+                <div class="products swiper-wrapper"></div>
             </div>
     </section>
 
 
 
     <footer id="footer"></footer>
+    <div id="scroll-to-top">
+        <svg width="50" height="50" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="45" stroke="#ccc" stroke-width="10" fill="none"></circle>
+          <circle id="progress-circle" cx="50" cy="50" r="45" stroke="#000" stroke-width="10" fill="none"
+            stroke-dasharray="282.6" stroke-dashoffset="282.6"></circle>
+        </svg>
+        <span>&uarr;</span>
+      </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -210,10 +186,12 @@
     <script src="assets/js/footer.js"></script>
     <!-- homepage js scripts -->
     <script src="assets/js/home_javascript/slider.js"></script>
-    <script src="assets/js/home_javascript/home_cart.js"></script>
+    <script src="./assets/js/home_javascript/home_cart.js"></script>
     <script src="assets/js/home_javascript/search.js"></script>
     <script src="assets/js/home_javascript/sliderhead.js"></script>
     <script src="assets/js/home_javascript/items_home.js"></script>
+    <script src="assets/js/circle.js"></script>
+
      <!-- Initialize Swiper -->
   <script src="./javascript/slider.js">
    
