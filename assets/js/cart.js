@@ -122,6 +122,8 @@ inputs.forEach((input) => {
   });
 });
 
+
+// cart Helper Functions
 function setCartProduct({ id, name, price, description, image }) {
   if (!id || !name || !price || !description || !image)
     return window.alert("There are some thing wrong here!");
@@ -130,9 +132,9 @@ function setCartProduct({ id, name, price, description, image }) {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-// cart Helper Functions
+
 function getCartProducts() {
-  let cartInLocalStorage = JSON.parse(localStorage.getItem("cart"));
+  let cartInLocalStorage = JSON.parse(localStorage.getItem("cart")) || [];
   if (cartInLocalStorage.length > 0) return cartInLocalStorage;
   return null;
 }
@@ -208,3 +210,24 @@ function renderCartProducts() {
   }
 }
 renderCartProducts();
+
+
+function memoize(fn) {
+    
+  return function(...args) {
+      
+  }
+}
+
+
+
+let callCount = 0;
+const memoizedFn = memoize(function (a, b) {
+callCount += 1;
+ return a + b;
+})
+memoizedFn(2, 3) // 5
+memoizedFn(2, 3) // 5
+console.log(callCount) // 1 
+
+
