@@ -4,15 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/circle.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/globals.css">
+
     <title>HomePage</title>
 </head>
 
 <body>
     <header id="header"></header>
+  
 
     <div class="cart">
         <div class="top_cart">
@@ -202,6 +206,14 @@
 
 
     <footer id="footer"></footer>
+    <div id="scroll-to-top">
+        <svg width="50" height="50" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="45" stroke="#ccc" stroke-width="10" fill="none"></circle>
+          <circle id="progress-circle" cx="50" cy="50" r="45" stroke="#000" stroke-width="10" fill="none"
+            stroke-dasharray="282.6" stroke-dashoffset="282.6"></circle>
+        </svg>
+        <span>&uarr;</span>
+      </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -214,6 +226,8 @@
     <script src="assets/js/home_javascript/search.js"></script>
     <script src="assets/js/home_javascript/sliderhead.js"></script>
     <script src="assets/js/home_javascript/items_home.js"></script>
+    <script src="assets/js/circle.js"></script>
+
      <!-- Initialize Swiper -->
   <script src="./javascript/slider.js">
    
