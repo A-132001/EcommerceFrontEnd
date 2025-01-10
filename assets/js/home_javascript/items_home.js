@@ -1,4 +1,4 @@
-
+let cartInStorage = JSON.parse(localStorage.getItem("cart")) || [];
 document.addEventListener("DOMContentLoaded", () => {
   try {
     const xhr = new XMLHttpRequest();
@@ -13,13 +13,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const productsContainer = document.querySelector(".products");
         const products = data.store1.products;
         console.log(products);
-    
+        
+       
+
         let productHTML = '';
         products.forEach((product) => {
+          let ProductInCart = cartInStorage.find(p => p.id === product.id);
           productHTML += `
             <div class="product swiper-slide" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-description="${product.description}" data-image="${product.image}">
               <div class="icons">
-                <span class="cart-icon"><i class="fa-solid fa-cart-plus"></i></span>
+                <span class="cart-icon"><i class="fa-solid fa-cart-plus" id="${product.id}-icon" style="color: ${ProductInCart ? 'gray' : 'inherit'};"></i></span>
                 <span><i class="fa-solid fa-heart"></i></span>
                 <span><i class="fa-solid fa-share"></i></span>
               </div>
@@ -84,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-let cartInStorage = JSON.parse(localStorage.getItem("cart")) || [];
+
 function setCartProduct({ id, name, price, description, image }) {
   if (!id || !name || !price || !description || !image)
     return window.alert("There are some thing wrong here!");
@@ -97,4 +100,5 @@ function setCartProduct({ id, name, price, description, image }) {
   
   cartInStorage.push({ id, name, price, description, image, qty: 1 });
   localStorage.setItem("cart", JSON.stringify(cartInStorage));
+  document.getElementById(`${id}-icon`).style.backgroundColor = 'gray';
 }
