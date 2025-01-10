@@ -1,7 +1,7 @@
+
 document.addEventListener("DOMContentLoaded", () => {
   try {
     const xhr = new XMLHttpRequest();
-
     xhr.open(
       "GET",
       "https://fake-products-api-kappa.vercel.app/api/products",
@@ -11,47 +11,56 @@ document.addEventListener("DOMContentLoaded", () => {
       if (xhr.status === 200) {
         const data = JSON.parse(xhr.responseText);
         const productsContainer = document.querySelector(".products");
-        productsContainer.innerHTML = "";
-
         const products = data.store1.products;
+        console.log(products);
+    
+        let productHTML = '';
         products.forEach((product) => {
-          const productHTML = `
-                       <div class="product swiper-slide">
-                           <div class="icons">
-                               <span><i class="fa-solid fa-cart-plus"></i></span>
-                               <span><i class="fa-solid fa-heart"></i></span>
-                               <span><i class="fa-solid fa-share"></i></span>
-                           </div>
-                           <span class="sale_present">%10</span>
-                           <div class="img_product">
-                               <img src="${product.image}" alt="${
-            product.name
-          }">
-                               <img src="${product.image}" alt="${
-            product.name
-          }" class="img_hover">
-                           </div>
-                           <h3 class="name_product">
-                               <a href="#">${product.name}</a>
-                           </h3>
-                           <div class="stars">
-                               <i class="fa-solid fa-star"></i>
-                               <i class="fa-solid fa-star"></i>
-                               <i class="fa-solid fa-star"></i>
-                               <i class="fa-solid fa-star"></i>
-                               <i class="fa-solid fa-star"></i>
-                           </div>
-                           <div class="price">
-                               <p><span>$${product.price.toFixed(2)}</span></p>
-                               <p class="old_price">$${(
-                                 product.price * 1.1
-                               ).toFixed(2)}</p>
-                           </div>
-                       </div>
-                   `;
-
-          productsContainer.innerHTML += productHTML;
+          productHTML += `
+            <div class="product swiper-slide" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-description="${product.description}" data-image="${product.image}">
+              <div class="icons">
+                <span class="cart-icon"><i class="fa-solid fa-cart-plus"></i></span>
+                <span><i class="fa-solid fa-heart"></i></span>
+                <span><i class="fa-solid fa-share"></i></span>
+              </div>
+              <span class="sale_present">%10</span>
+              <div class="img_product">
+                <img src="${product.image}" alt="${product.name}">
+                <img src="${product.image}" alt="${product.name}" class="img_hover">
+              </div>
+              <h3 class="name_product">
+                <a href="#">${product.name}</a>
+              </h3>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="price">
+                <p><span>$${product.price.toFixed(2)}</span></p>
+                <p class="old_price">$${(product.price * 1.1).toFixed(2)}</p>
+              </div>
+            </div>
+          `;
         });
+        productsContainer.innerHTML = productHTML;
+
+    // Add event delegation for cart icons
+    productsContainer.addEventListener('click', (event) => {
+      if (event.target.closest('.cart-icon')) {
+        const productElement = event.target.closest('.product');
+        const id = productElement.dataset.id;
+        const name = productElement.dataset.name;
+        const price = parseFloat(productElement.dataset.price);
+        const description = productElement.dataset.description;
+        const image = productElement.dataset.image;
+
+        // Invoke setCartProduct
+        setCartProduct({id, name, price, description, image});
+      }
+    });
         const swiper = new Swiper(".mySwiper", {
           slidesPerView: 4,
           spaceBetween: 30,
@@ -72,3 +81,20 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Error:", error);
   }
 });
+
+
+
+let cartInStorage = JSON.parse(localStorage.getItem("cart")) || [];
+function setCartProduct({ id, name, price, description, image }) {
+  if (!id || !name || !price || !description || !image)
+    return window.alert("There are some thing wrong here!");
+
+  const isProductInCart = cartInStorage.some((product) => product.id === id);
+
+  if (isProductInCart) {
+    return window.alert("This product is already in the cart!");
+  }
+  
+  cartInStorage.push({ id, name, price, description, image, qty: 1 });
+  localStorage.setItem("cart", JSON.stringify(cartInStorage));
+}
