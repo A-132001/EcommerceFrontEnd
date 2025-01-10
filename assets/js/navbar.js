@@ -10,10 +10,10 @@ function navbarContent() {
       <header>
         <div class="container top-nav">
             <a href="#" class="logo"><img src="assets/images/homePage/logo-black.png" alt=""></a>
-            <form action="" class="search">
-                <input type="search" placeholder="Search for products ...">
-                <button type="submit">Search</button>
-            </form>
+             <form action="./result.html" class="search">
+                <input type="search" id="searchInput" placeholder="Search for products ...">
+                <button type="submit" id="searchButton">Search</button>
+              </form>  
 
             <div class="cart_header">
                 <div onclick="open_cart()" class="icon_cart">
@@ -31,8 +31,8 @@ function navbarContent() {
                 <ul>
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="productStore.html">all products</a></li>
-                    <li><a href="">about us</a></li>
-                    <li><a href="">contact</a></li>
+                    <li><a href="About.html">about us</a></li>
+                    <li><a href="contactus.html">contact</a></li>
                 </ul>
 
                 <div class="loging_signup">
