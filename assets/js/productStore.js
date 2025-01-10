@@ -52,6 +52,7 @@ function displayProductsStore1(products) {
     element4.style.display = "none";
     element1.appendChild(element3);
     element3.classList.add("buttonStyle");
+    element3.id = `${product.id}-BTN`;
     element4.classList.add("heartStyle");
     function buttonAdd() {
       element4.style.display = "block";
@@ -95,11 +96,13 @@ function setCartProduct({ id, name, price, description, image }) {
   const isProductInCart = cart.some((product) => product.id === id);
 
   if (isProductInCart) {
+   
     return window.alert("This product is already in the cart!");
   }
 
   cart.push({ id, name, price, description, image, qty: 1 });
   localStorage.setItem("cart", JSON.stringify(cart));
+  document.getElementById(`${id}-BTN`).style.backgroundColor = 'gray';
 }
 
 // Added by Abdo
