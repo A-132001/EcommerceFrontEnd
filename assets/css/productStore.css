@@ -122,6 +122,7 @@ background-color: #040404; /* لون عند التمرير */
 position: relative; /* جعل الـ div الأساسي مرجعًا للمواضع النسبية */
 text-align: center;
 display: inline-block;
+cursor: pointer;
 }
 
 

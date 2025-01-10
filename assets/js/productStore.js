@@ -1,4 +1,7 @@
-let cart =JSON.parse(localStorage.getItem("cart")) || [] ;
+xhr = new XMLHttpRequest();
+xhr.open("GET", "https://fake-products-api-kappa.vercel.app/api/products");
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
 var data = [];
 var elements = document.getElementById("productData");
 var members = document.getElementById("store-links");
@@ -12,8 +15,7 @@ xhr.onload = function () {
   if (xhr.status === 200) {
     const response = JSON.parse(xhr.responseText);
     console.log(response);
-    
-   
+
     // displayName();
     displayProductsStore1(response.store1.products);
     // displayStores(data.stores.names);
@@ -37,7 +39,7 @@ function displayProductsStore1(products) {
     element1.innerHTML = `
     <h3>${product.name}</h3>
     <h5>${product.description}</h5>
-    <img src ="${product.image}" width="250px">
+    <img class='productImage' src ="${product.image}" width="250px">
     <h6> ${product.price} $</h6>
     `;
     elements.appendChild(element1);
@@ -65,33 +67,48 @@ function displayProductsStore1(products) {
         name: product.name,
         price: product.price,
         description: product.description,
-        image: product.image
+        image: product.image,
       });
     };
-
-
-
+    // Display product details and send data by local storge when clicked // Added by Abdo
+    var productImage = element1.querySelector(".productImage");
+    productImage.onclick = function () {
+      sendDataToProductDetails({
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        description: product.description,
+        image: product.image,
+      });
+      window.location.href = `product.html`;
+    };
 
     element1.onmouseenter = buttonAdd;
     element1.onmouseleave = buttondel;
   });
 }
 
-
-
 function setCartProduct({ id, name, price, description, image }) {
   if (!id || !name || !price || !description || !image)
     return window.alert("There are some thing wrong here!");
 
-  const isProductInCart = cart.some(product => product.id === id);
+  const isProductInCart = cart.some((product) => product.id === id);
 
   if (isProductInCart) {
     return window.alert("This product is already in the cart!");
   }
 
-
-  cart.push({ id, name, price, description, image , qty : 1 });
+  cart.push({ id, name, price, description, image, qty: 1 });
   localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+// Added by Abdo
+let productDetails = [];
+function sendDataToProductDetails({ id, name, price, description, image }) {
+  if (!id || !name || !price || !description || !image)
+    return window.alert("There are some thing wrong here!");
+  productDetails.push({ id, name, price, description, image, qty: 1 });
+  localStorage.setItem("productDetails", JSON.stringify(productDetails));
 }
 
 // function displayStores(stores) {

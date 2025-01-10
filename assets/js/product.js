@@ -49,4 +49,26 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+  // get product Details from local Storge
+  function getCartProducts() {
+    let productInLocalStorage = JSON.parse(
+      localStorage.getItem("productDetails")
+    );
+    return productInLocalStorage[0];
+  }
+  // display product details in product
+  function displayProductDetails(details) {
+    let image = document.querySelector(".main-image");
+    let name = document.querySelector(".product-name");
+    let price = document.querySelector(".product-price");
+    let description = document.querySelector(".product-description");
+    image.innerHTML = `<img src="${details.image}" alt="${details.name}" />`;
+    name.textContent = details.name;
+    price.textContent = details.price;
+    description.textContent = details.description;
+  }
+
+  let productDetails = getCartProducts();
+  console.log(productDetails);
+  displayProductDetails(productDetails);
 });
