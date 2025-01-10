@@ -1,9 +1,13 @@
-xhr = new XMLHttpRequest();
-xhr.open("GET", "https://fake-products-api-kappa.vercel.app/api/products");
 let cart =JSON.parse(localStorage.getItem("cart")) || [] ;
 var data = [];
 var elements = document.getElementById("productData");
 var members = document.getElementById("store-links");
+
+
+
+
+xhr = new XMLHttpRequest();
+xhr.open("GET", "https://fake-products-api-kappa.vercel.app/api/products");
 xhr.onload = function () {
   if (xhr.status === 200) {
     const response = JSON.parse(xhr.responseText);

@@ -30,7 +30,7 @@ body {
   }
   
   #progress-circle {
-    transition: stroke-dashoffset 0.2s;
+    transition:  0.1s;
   }
   
   .heartStyle {
