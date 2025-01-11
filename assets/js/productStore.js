@@ -9,28 +9,32 @@ var members = document.getElementById("store-links");
 
 
 
-xhr = new XMLHttpRequest();
-xhr.open("GET", "https://fake-products-api-kappa.vercel.app/api/products");
-xhr.onload = function () {
-  if (xhr.status === 200) {
-    const response = JSON.parse(xhr.responseText);
-    console.log(response);
+document.addEventListener("DOMContentLoaded", function () {
+  xhr.open("GET", "https://fake-products-api-kappa.vercel.app/api/products");
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+      const response = JSON.parse(xhr.responseText);
+      console.log(response);
 
-    // displayName();
-    displayProductsStore1(response.store1.products);
-    // displayStores(data.stores.names);
-  }
-};
-xhr.send();
-// function displayName() {
-//   var element = document.createElement("h2");
-//   element.classList.add("styleH2");
-//   element.innerHTML = `
-//  ${data.store1.name}
+      data = response;
+      displayProductsStore1(response.store1.products);
+      displayName();
+    }
+  };
+  xhr.send();
+});
+function displayName() {
+  var element = document.createElement("h2");
+  element.classList.add("styleH2");
+  element.innerHTML = `
+    <a href="#" class="store-link" onclick="showProducts('store1')">${data.store1.name}</a>
+    <a href="#" class="store-link" onclick="showProducts('store2')">${data.store2.name}</a>
+    <a href="#" class="store-link" onclick="showProducts('store3')">${data.store3.name}</a>
+    <a href="#" class="store-link" onclick="showProducts('store4')">${data.store4.name}</a>
 
-// `;
-//   elements.appendChild(element);
-// }
+`;
+  members.appendChild(element);
+}
 
 function displayProductsStore1(products) {
   products.forEach((product) => {
@@ -111,10 +115,6 @@ function sendDataToProductDetails({ id, name, price, description, image }) {
   localStorage.setItem("productDetails", JSON.stringify(productDetails));
 }
 
-// function displayStores(stores) {
-//     stores.forEach(store => {
-//         var member = document.createElement("div");
-//         member.innerHTML = `<p>${store.name}<p>`; // عرض اسم المتجر
-//         members.appendChild(member);
-//     });
-// }
+
+
+
