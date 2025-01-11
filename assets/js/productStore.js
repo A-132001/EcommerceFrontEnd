@@ -28,6 +28,7 @@ xhr.send();
 
 function displayProductsStore1(products) {
   products.forEach((product) => {
+    
     var element1 = document.createElement("div");
     element1.classList.add("stylediv");
     element1.innerHTML = `

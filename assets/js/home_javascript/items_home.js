@@ -13,9 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const productsContainer = document.querySelector(".products");
         const products = data.store1.products;
         console.log(products);
-        
-       
-
         let productHTML = '';
         products.forEach((product) => {
           let ProductInCart = cartInStorage.find(p => p.id === product.id);
