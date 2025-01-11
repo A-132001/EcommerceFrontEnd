@@ -7,6 +7,7 @@
     <title>Product Details</title>
     <link rel="stylesheet" href="assets/css/globals.css">
     <link rel="stylesheet" href="assets/css/product.css">
+    <link rel="stylesheet" href="./assets/css/circle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
@@ -15,6 +16,14 @@
     <!-- load header from javascript file -->
     <header id="header"></header>
     <!-- Start product details main section -->
+    <div id="scroll-to-top">
+        <svg width="50" height="50" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="45" stroke="#ccc" stroke-width="10" fill="none"></circle>
+          <circle id="progress-circle" cx="50" cy="50" r="45" stroke="#000" stroke-width="10" fill="none"
+            stroke-dasharray="282.6" stroke-dashoffset="282.6"></circle>
+        </svg>
+        <span>&uarr;</span>
+      </div>
     <main>
         <div class="breadcrumb">
             <a href="#">Home</a> > <span>Product Details</span>
@@ -76,7 +85,7 @@
                 <div class="add-to-cart">
                     <div class="quantity">
                         <button>-</button>
-                        <input type="text" value="1">
+                        <input id="quantity" type="text" value="1">
                         <button>+</button>
                     </div>
                     <button class="cart-button">Add to Cart</button>
@@ -180,6 +189,7 @@
     <script src="assets/js/navbar.js"></script>
     <script src="assets/js/footer.js"></script>
     <script src="assets/js/product.js"></script>
+    <script src="./assets/js/circle.js"></script>
     
 </body>
 
