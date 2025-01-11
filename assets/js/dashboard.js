@@ -1,7 +1,5 @@
-// Extract all query parameters
 const urlParams = new URLSearchParams(window.location.search);
 
-// Get individual pieces of data
 const storeName = urlParams.get('storeName');
 const ownerName = urlParams.get('ownerName');
 const ownerEmail = urlParams.get('ownerEmail');
@@ -9,7 +7,6 @@ const storeEmail = urlParams.get('storeEmail');
 const phone = urlParams.get('phone');
 const address = urlParams.get('address');
 
-// Display welcome message and user information
 const welcomeMessage = document.getElementById('welcomeMessage');
 const userInfo = document.getElementById('userInfo');
 
@@ -27,7 +24,6 @@ if (storeName && ownerName) {
     userInfo.innerHTML = '<p>No additional information provided.</p>';
 }
 
-// Input fields and buttons
 var idInput = document.getElementById("product-id");
 var titleInput = document.getElementById("product-title");
 var priceInput = document.getElementById("product-price");
@@ -36,22 +32,18 @@ var cancelButton = document.getElementById("cancel-all");
 var productList = document.getElementById("product-list");
 var errorMessage = document.getElementById("error-message");
 
-// Add Product
 function addProduct() {
     var id = idInput.value.trim();
     var title = titleInput.value.trim();
     var price = priceInput.value.trim();
 
-    // Clear any previous error messages
     errorMessage.textContent = "";
 
-    // Validate input fields
     if (id === "" || title === "" || price === "") {
         errorMessage.textContent = "Please fill in all fields (ID, Title, and Price).";
         return;
     }
 
-    // Check for duplicate IDs
     var existingIds = Array.from(productList.children).map((tr) =>
         tr.getAttribute("data-id")
     );
@@ -60,11 +52,9 @@ function addProduct() {
         return;
     }
 
-    // Create product list item
     var tr = document.createElement("tr");
     tr.setAttribute("data-id", id);
 
-    // Product details container
     var productIdTd = document.createElement("td");
     productIdTd.textContent = id;
     tr.appendChild(productIdTd);
@@ -77,7 +67,6 @@ function addProduct() {
     productPriceTd.textContent = "$" + price;
     tr.appendChild(productPriceTd);
 
-    // Actions buttons
     var actionsTd = document.createElement("td");
     var editButton = document.createElement("button");
     editButton.textContent = "Edit";
@@ -86,7 +75,7 @@ function addProduct() {
         idInput.value = id;
         titleInput.value = title;
         priceInput.value = price;
-        productList.removeChild(tr); // Remove the current product for editing
+        productList.removeChild(tr); 
     };
     actionsTd.appendChild(editButton);
 
@@ -94,7 +83,7 @@ function addProduct() {
     removeButton.textContent = "Remove";
     removeButton.classList.add("remove");
     removeButton.onclick = function () {
-        productList.removeChild(tr); // Remove the product from the list
+        productList.removeChild(tr); 
     };
     actionsTd.appendChild(removeButton);
 
@@ -107,10 +96,8 @@ function addProduct() {
     priceInput.value = "";
 }
 
-// Event listener for Add Product button
 saveButton.addEventListener("click", addProduct);
 
-// Function to open the centered confirmation popup for clearing all products
 function openConfirmationPopup() {
     var width = 400;
     var height = 200;
@@ -124,21 +111,18 @@ function openConfirmationPopup() {
         <button id="no-cancel">Cancel</button>
     `;
     
-    // Add event listeners to the buttons in the popup
     win.document.getElementById("yes-clear").addEventListener("click", function() {
         clearAllProducts();
-        win.close(); // Close the popup after clearing
+        win.close();
     });
     
     win.document.getElementById("no-cancel").addEventListener("click", function() {
-        win.close(); // Close the popup without clearing
+        win.close(); 
     });
 }
 
-// Function to clear all products
 function clearAllProducts() {
     productList.innerHTML = "";
 }
 
-// Event listener for Clear All button
 cancelButton.addEventListener("click", openConfirmationPopup);
