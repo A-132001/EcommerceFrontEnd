@@ -4,9 +4,6 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 var data = [];
 var elements = document.getElementById("productData");
-var members = document.getElementById("store-links");
-
-
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -23,18 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
   xhr.send();
 });
-function displayName() {
-  var element = document.createElement("h2");
-  element.classList.add("styleH2");
-  element.innerHTML = `
-    <a href="#" class="store-link" onclick="showProducts('store1')">${data.store1.name}</a>
-    <a href="#" class="store-link" onclick="showProducts('store2')">${data.store2.name}</a>
-    <a href="#" class="store-link" onclick="showProducts('store3')">${data.store3.name}</a>
-    <a href="#" class="store-link" onclick="showProducts('store4')">${data.store4.name}</a>
 
-`;
-  members.appendChild(element);
-}
 
 function displayProductsStore1(products) {
   products.forEach((product) => {

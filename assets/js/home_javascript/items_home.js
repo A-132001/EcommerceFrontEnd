@@ -1,6 +1,7 @@
 let cartInStorage = JSON.parse(localStorage.getItem("cart")) || [];
 document.addEventListener("DOMContentLoaded", () => {
   try {
+    let APIresult;
     const xhr = new XMLHttpRequest();
     xhr.open(
       "GET",
@@ -11,10 +12,24 @@ document.addEventListener("DOMContentLoaded", () => {
       if (xhr.status === 200) {
         const data = JSON.parse(xhr.responseText);
         const productsContainer = document.querySelector(".products");
+        APIresult = data;
         const products = data.store1.products;
         console.log(products);
         
-       
+        window.showStoreProducts = function(storeData) {
+          localStorage.setItem("storeDate", JSON.stringify(storeData));
+          console.log(storeData);
+          
+          // window.location.href = 'productStore.html';
+        };
+        
+        // Home page side navbar -- mostafa
+        let storeLinks = document.getElementById("store-links");
+        for (const res in APIresult) {
+          storeLinks.innerHTML += `<a href="#" id="${APIresult[res].name}" onclick="showStoreProducts('${APIresult[res].products}')">${APIresult[res].name}</a>`;
+        }
+
+        console.log(APIresult);
 
         let productHTML = '';
         products.forEach((product) => {
@@ -83,7 +98,13 @@ document.addEventListener("DOMContentLoaded", () => {
   } catch (error) {
     console.error("Error:", error);
   }
+
+
+  
+
+
 });
+
 
 
 
@@ -102,3 +123,7 @@ function setCartProduct({ id, name, price, description, image }) {
   localStorage.setItem("cart", JSON.stringify(cartInStorage));
   document.getElementById(`${id}-icon`).style.backgroundColor = 'gray';
 }
+
+
+
+

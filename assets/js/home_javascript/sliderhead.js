@@ -37,5 +37,3 @@ const autoplayInterval = setInterval(() => {
     currentIndex = (currentIndex + 1) % totalSlides;  
     updateSlider();
 }, 1000);  
-
-
