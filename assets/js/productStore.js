@@ -12,10 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (xhr.status === 200) {
       const response = JSON.parse(xhr.responseText);
       console.log(response);
-
       data = response;
-      displayProductsStore1(response.store1.products);
-      displayName();
+      const storeData = JSON.parse(localStorage.getItem("storeDate")) || response.store1.products;
+      console.log(storeData);
+      
+      displayProductsStore1(storeData);
+      // displayName();
     }
   };
   xhr.send();

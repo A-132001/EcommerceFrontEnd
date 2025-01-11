@@ -14,19 +14,27 @@ document.addEventListener("DOMContentLoaded", () => {
         const productsContainer = document.querySelector(".products");
         APIresult = data;
         const products = data.store1.products;
-        console.log(products);
-        
+      
+        // Home page side navbar function -- mostafa
         window.showStoreProducts = function(storeData) {
           localStorage.setItem("storeDate", JSON.stringify(storeData));
           console.log(storeData);
-          
-          // window.location.href = 'productStore.html';
+        
+          window.location.href = 'productStore.html';
         };
         
         // Home page side navbar -- mostafa
+
         let storeLinks = document.getElementById("store-links");
         for (const res in APIresult) {
-          storeLinks.innerHTML += `<a href="#" id="${APIresult[res].name}" onclick="showStoreProducts('${APIresult[res].products}')">${APIresult[res].name}</a>`;
+          const link = document.createElement("a");
+          link.href = "#";
+          link.id = APIresult[res].name;
+          link.textContent = APIresult[res].name;
+  
+          link.addEventListener("click", () => showStoreProducts(APIresult[res].products));
+        
+          storeLinks.appendChild(link);
         }
 
         console.log(APIresult);
