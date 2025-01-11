@@ -142,6 +142,12 @@ cursor: pointer;
     color: black; 
 }
 
-
+.store-link {
+    margin-right: 10px; /* إضافة مسافة بين العناصر */
+    display: inline-block; /* جعل الروابط تظهر في نفس السطر */
+    padding: 5px; /* إضافة مسافة داخل الرابط */
+    background-color: #ffb700;
+    color: #040404;
+  }
 
 

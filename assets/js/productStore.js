@@ -4,27 +4,25 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 var data = [];
 var elements = document.getElementById("productData");
-var members = document.getElementById("store-links");
-xhr.onload = function () {
-  if (xhr.status === 200) {
-    const response = JSON.parse(xhr.responseText);
-    console.log(response);
 
-    // displayName();
-    displayProductsStore1(response.store1.products);
-    // displayStores(data.stores.names);
-  }
-};
-xhr.send();
-// function displayName() {
-//   var element = document.createElement("h2");
-//   element.classList.add("styleH2");
-//   element.innerHTML = `
-//  ${data.store1.name}
 
-// `;
-//   elements.appendChild(element);
-// }
+document.addEventListener("DOMContentLoaded", function () {
+  xhr.open("GET", "https://fake-products-api-kappa.vercel.app/api/products");
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+      const response = JSON.parse(xhr.responseText);
+      console.log(response);
+      data = response;
+      const storeData = JSON.parse(localStorage.getItem("storeDate")) || response.store1.products;
+      console.log(storeData);
+      
+      displayProductsStore1(storeData);
+      // displayName();
+    }
+  };
+  xhr.send();
+});
+
 
 function displayProductsStore1(products) {
   products.forEach((product) => {
@@ -47,7 +45,6 @@ function displayProductsStore1(products) {
     element4.style.display = "none";
     element1.appendChild(element3);
     element3.classList.add("buttonStyle");
-    element3.id = `${product.id}-BTN`;
     element4.classList.add("heartStyle");
     function buttonAdd() {
       element4.style.display = "block";
@@ -91,13 +88,11 @@ function setCartProduct({ id, name, price, description, image }) {
   const isProductInCart = cart.some((product) => product.id === id);
 
   if (isProductInCart) {
-   
     return window.alert("This product is already in the cart!");
   }
 
   cart.push({ id, name, price, description, image, qty: 1 });
   localStorage.setItem("cart", JSON.stringify(cart));
-  document.getElementById(`${id}-BTN`).style.backgroundColor = 'gray';
 }
 
 // Added by Abdo
@@ -109,10 +104,6 @@ function sendDataToProductDetails({ id, name, price, description, image }) {
   localStorage.setItem("productDetails", JSON.stringify(productDetails));
 }
 
-// function displayStores(stores) {
-//     stores.forEach(store => {
-//         var member = document.createElement("div");
-//         member.innerHTML = `<p>${store.name}<p>`; // عرض اسم المتجر
-//         members.appendChild(member);
-//     });
-// }
+
+
+
