@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+    <div class="containerlog">
+        <h2>User Profile</h2>
+        <div id="welcomeMessage"></div>
+        <div id="userInfo" class="info"></div>
+    </div>
+
+    <div class="container">
+        <h2>Product Management</h2>
+    
+        <label for="product-id">Product ID:</label>
+        <input type="text" id="product-id" placeholder="Enter Product ID">
+    
+        <label for="product-title">Product Title:</label>
+        <input type="text" id="product-title" placeholder="Enter Product Title">
+    
+        <label for="product-price">Product Price:</label>
+        <input type="number" id="product-price" placeholder="Enter Product Price">
+    
+        <button id="save-product">Add Product</button>
+        <button id="cancel-all">Clear All</button>
+    
+        <p id="error-message" class="error-message"></p>
+    
+        <table id="product-table">
+          <thead>
+            <tr>
+              <th>Product ID</th>
+              <th>Title</th>
+              <th>Price</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="product-list">
+          </tbody>
+        </table>
+      </div>
+
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
