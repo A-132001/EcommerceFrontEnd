@@ -68,4 +68,36 @@ function setCookie(cookieName, cookieValue, days) {
 
 
 
+const dataToSend = {
+  name: "John Doe",
+  email: "johndoe@example.com",
+  age: 30
+};
 
+// عنوان API
+const apiUrl = "https://example.com/api/endpoint";
+
+// إرسال البيانات إلى الـ API
+fetch(apiUrl, {
+  method: "POST", // تحديد طريقة الإرسال
+  headers: {
+    "Content-Type": "application/json", // تحديد نوع البيانات
+  },
+  body: JSON.stringify(dataToSend), // تحويل البيانات إلى صيغة JSON
+})
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Failed to send data");
+    }
+    return response.json(); // تحويل الاستجابة إلى JSON
+  })
+  .then((responseData) => {
+    console.log("Response from API:", responseData);
+
+    // تخزين البيانات في LocalStorage
+    localStorage.setItem("apiResponse", JSON.stringify(responseData));
+    console.log("Data stored in LocalStorage");
+  })
+  .catch((error) => {
+    console.error("Error:", error.message);
+  });
