@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(response);
       data = response;
 
-      const storeData = JSON.parse(localStorage.getItem("cart")) || response.store1.products;
+      const storeData = JSON.parse(localStorage.getItem("storeDate")) || response.store1.products;
       console.log(storeData);
 
       showProductss("store1");
